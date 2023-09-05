@@ -81,6 +81,24 @@ module.exports = {
   ],
   ownpapers: [
     {
+      title: 'Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study',
+      venue: 'IEEE Access 2023',
+      citation: '<u> Geraldo F. Oliveira </u>, Saugata Ghose, Juan Gómez-Luna, Amirali Boroumand, Alexis Savery, Sonny Rao, Salman Qazi, Gwendal Grignou, Rahul Thakur, Eric Shiu and Onur Mutlu <b>"Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study","</b> arXiv:2111.02325 [cs.AR], 2021.',
+      keywords: ['consumer devices', 'emerging memory', 'web browsing', 'dram', 'optane', 'chromebook'],
+      awards: [],
+      summary:`
+      In this work, we provide the first analysis of the impact of extending the main memory space of consumer devices using off-the-shelf NVMs. We extensively examine system performance and energy consumption when the NVM device is used as swap space for DRAM main memory to effectively extend the main memory capacity. For our analyses, we equip real web-based Chromebook computers with the Intel Optane SSD, which is a state-of-the-art low-latency NVM-based SSD device. We compare the performance and energy consumption of interactive workloads running on our Chromebook with NVM-based swap space, where the Intel Optane SSD capacity is used as swap space to extend main memory capacity, against two state-of-the-art systems: (i) a baseline system with double the amount of DRAM than the system with the NVM-based swap space; and (ii) a system where the Intel Optane SSD is naively replaced with a state-of-the-art (yet slower) off-the-shelf NAND-flash-based SSD, which we use as a swap space of equivalent size as the NVM-based swap space.
+      `,
+      sources:[ 
+        {
+          text:'Full Paper',
+          urls: [
+            {type: 'file-pdf', url:'https://arxiv.org/pdf/2111.02325.pdf'}
+          ]
+        },
+      ]
+    },
+    {
       title: 'Heterogeneous Data-Centric Architectures for Modern Data-Intensive Applications: Case Studies in Machine Learning and Databases',
       venue: 'ISVLSI 2022',
       citation: `<u>Geraldo F. Oliveira</u>, Amirali Boroumand, Saugata Ghose, Juan J. Gómez-Luna and Onur Mutlu,
@@ -181,7 +199,7 @@ module.exports = {
       keywords: ['benchmarking', 'data movement',  'memory systems', 'dram', 'near-data processing', 'workload characterization'],
       awards: [],
       summary:`
-      Our goal is to methodically identify potential sources of data movement over a broad set of applications and to comprehensively compare traditional compute-centric data movement mitigation techniques (e.g., cach ing and prefetch ing) to more memory-centric techniques (e.g., NDP), thereby developing a rigorous understanding of the best techniques to mitigate each source of data movement. With this goal in mind, we perform the first large-scale characterization of a wide variety of applications, across a wide range of application domains, to identify fundamental program properties that lead to data movement to/from main memory. We develop the first systematic methodology to classify applications based on the sources contributing to data movement bottlenecks. 
+      Our goal is to methodically identify potential sources of data movement over a broad set of applications and to comprehensively compare traditional compute-centric data movement mitigation techniques (e.g., caching and prefetching) to more memory-centric techniques (e.g., NDP), thereby developing a rigorous understanding of the best techniques to mitigate each source of data movement. With this goal in mind, we perform the first large-scale characterization of a wide variety of applications, across a wide range of application domains, to identify fundamental program properties that lead to data movement to/from main memory. We develop the first systematic methodology to classify applications based on the sources contributing to data movement bottlenecks. 
       `,
       sources: [
         {text: 'Full Paper', urls: [{type: 'file-pdf', url:'https://people.inf.ethz.ch/omutlu/pub/DAMOV-Bottleneck-Analysis-and-DataMovement-Benchmarks_IEEEaccess21.pdf'}]},
@@ -196,24 +214,6 @@ module.exports = {
           {type: 'file-pdf', url:'https://people.inf.ethz.ch/omutlu/pub/DAMOV-Bottleneck-Analysis-and-DataMovement-Benchmarks_IEEEaccess21-SAFARI-LiveSeminar-talk'},
           {type: 'file-powerpoint', url:'https://people.inf.ethz.ch/omutlu/pub/DAMOV-Bottleneck-Analysis-and-DataMovement-Benchmarks_IEEEaccess21-SAFARI-LiveSeminar-talk.pptx'},
         ]},
-      ]
-    },
-    {
-      title: 'Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study',
-      venue: 'arXiv 2021',
-      citation: '<u> Geraldo F. Oliveira </u>, Saugata Ghose, Juan Gómez-Luna, Amirali Boroumand, Alexis Savery, Sonny Rao, Salman Qazi, Gwendal Grignou, Rahul Thakur, Eric Shiu and Onur Mutlu <b>"Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study","</b> arXiv:2111.02325 [cs.AR], 2021.',
-      keywords: ['consumer devices', 'emerging memory', 'web browsing', 'dram', 'optane', 'chromebook'],
-      awards: [],
-      summary:`
-      In this work, we provide the first analysis of the impact of extending the main memory space of consumer devices using off-the-shelf NVMs. We extensively examine system performance and energy consumption when the NVM device is used as swap space for DRAM main memory to effectively extend the main memory capacity. For our analyses, we equip real web-based Chromebook computers with the Intel Optane SSD, which is a state-of-the-art low-latency NVM-based SSD device. We compare the performance and energy consumption of interactive workloads running on our Chromebook with NVM-based swap space, where the Intel Optane SSD capacity is used as swap space to extend main memory capacity, against two state-of-the-art systems: (i) a baseline system with double the amount of DRAM than the system with the NVM-based swap space; and (ii) a system where the Intel Optane SSD is naively replaced with a state-of-the-art (yet slower) off-the-shelf NAND-flash-based SSD, which we use as a swap space of equivalent size as the NVM-based swap space.
-      `,
-      sources:[ 
-        {
-          text:'Full Paper',
-          urls: [
-            {type: 'file-pdf', url:'https://arxiv.org/pdf/2111.02325.pdf'}
-          ]
-        },
       ]
     },
     {
