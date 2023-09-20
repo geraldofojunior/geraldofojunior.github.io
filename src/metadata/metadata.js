@@ -39,42 +39,36 @@ module.exports = {
       period: 'Nov 2018 - Present',
       title: 'Research and Teaching Assistant',
       organization: 'ETH Zürich',
-      skills: ['tragedy', 'death', 'love'],
       contents: ``
     },
     {
       period: 'Apr 2019 - Sep 2019',
       title: 'Hardware Engineering Intern',
       organization: 'Google',
-      skills: ['tragedy', 'death', 'love'],
       contents: ``
     },
     {
       period: 'Nov 2017 - Oct 2018',
       title: 'Research Intern',
       organization: 'ETH Zurich',
-      skills: ['tragedy', 'death', 'love'],
       contents: ``
     },
     {
       period: 'Mar 2016 - Aug 2017',
       title: 'Research and Teaching Assistant',
       organization: 'Federal University of Rio Grande do Sul',
-      skills: ['tragedy', 'death', 'love'],
       contents: ``
     },
     {
       period: 'Jul 2015 - Dec 2015',
       title: 'Undergrad Research Assistant',
       organization: 'Federal University of Vicosa',
-      skills: ['tragedy', 'death', 'love'],
       contents: ``
     },
     {
       period: 'Mar 2014 - May 2014',
       title: 'Undergrad Research Assistant',
       organization: 'Federal University of Vicosa',
-      skills: ['tragedy', 'death', 'love'],
       contents: ``
     },
 
@@ -83,7 +77,7 @@ module.exports = {
     {
       title: 'Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study',
       venue: 'IEEE Access 2023',
-      citation: '<u> Geraldo F. Oliveira </u>, Saugata Ghose, Juan Gómez-Luna, Amirali Boroumand, Alexis Savery, Sonny Rao, Salman Qazi, Gwendal Grignou, Rahul Thakur, Eric Shiu and Onur Mutlu <b>"Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study","</b> arXiv:2111.02325 [cs.AR], 2021.',
+      citation: '<u>G. F. Oliveira</u>, S. Ghose, J. Gómez-Luna, A. Boroumand, A. Savery, S. Rao, S. Qazi, G. Grignou, R. Thakur, E. Shiu, and Onur Mutlu, <b>"Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study","</b> IEEE Access, 2023.',
       keywords: ['consumer devices', 'emerging memory', 'web browsing', 'dram', 'optane', 'chromebook'],
       awards: [],
       summary:`
@@ -101,9 +95,9 @@ module.exports = {
     {
       title: 'Heterogeneous Data-Centric Architectures for Modern Data-Intensive Applications: Case Studies in Machine Learning and Databases',
       venue: 'ISVLSI 2022',
-      citation: `<u>Geraldo F. Oliveira</u>, Amirali Boroumand, Saugata Ghose, Juan J. Gómez-Luna and Onur Mutlu,
+      citation: `<u>G. F. Oliveira</u>, A. Boroumand, S. Ghose, J. Gómez-Luna, and O. Mutlu,
       <b> "Heterogeneous Data-Centric Architectures for Modern Data-Intensive Applications: Case Studies in Machine Learning and Databases," </b>
-      IEEE Computer Society Annual Symposium on VLSI (ISLVSI), Nicosia, Cyprus, 2022.`,
+      in Proceedings of the IEEE Computer Society Annual Symposium on VLSI (ISLVSI), Nicosia, Cyprus, 2022.`,
       keywords: ['memory', 'dram', 'processing-in-memory', 'machine learning', 'databases'],
       awards: [],
       summary:`
@@ -127,9 +121,9 @@ module.exports = {
     {
       title: 'Methodologies, Workloads, and Tools for Processing-in-Memory: Enabling the Adoption of Data-Centric Architectures',
       venue: 'ISVLSI 2022',
-      citation: `<u>Geraldo F. Oliveira</u>, Juan J. Gómez-Luna, Saugata Ghose and Onur Mutlu,
+      citation: `<u>G. F. Oliveira</u>, J. Gómez-Luna, S. Ghose, and O. Mutlu,
       <b> "Methodologies, Workloads, and Tools for Processing-in-Memory: Enabling the Adoption of Data-Centric Architectures," </b>
-      IEEE Computer Society Annual Symposium on VLSI (ISLVSI), Nicosia, Cyprus, 2022.`,
+      in Proceedings of the IEEE Computer Society Annual Symposium on VLSI (ISLVSI), Nicosia, Cyprus, 2022.`,
       keywords: ['memory', 'dram', 'processing-in-memory', 'benchmarking', 'frameworks'],
       awards: [],
       summary:`
@@ -153,7 +147,7 @@ module.exports = {
     {
       title: 'Accelerating Neural Network Inference With Processing-in-DRAM: From the Edge to the Cloud',
       venue: 'ISVLSI 2022',
-      citation: `<u>Geraldo F. Oliveira</u>, Juan J. Gómez-Luna, Saugata Ghose and Onur Mutlu,
+      citation: `<u>G. F. Oliveira</u>, J. Gómez-Luna, S. Ghose, and O. Mutlu,
       <b> "Accelerating Neural Network Inference With Processing-in-DRAM: From the Edge to the Cloud," </b>
       IEEE Micro, vol. 42, no. 6, pp. 25-38, 1 Nov.-Dec. 2022.`,
       keywords: ['memory', 'dram', 'processing-in-memory', 'neural networks', 'inference'],
@@ -179,9 +173,9 @@ module.exports = {
     {
       title: 'SIMDRAM: An End-to-End Framework for Bit-Serial SIMD Computing in DRAM',
       venue: 'ASPLOS 2021',
-      citation: `Nastaran Hajinazar, <u>Geraldo F. Oliveira</u>, Joao Dinis Ferreira, Nika Mansouri Ghiasi, Minesh Patel, Mohammed Alser, Saugata Ghose, Juan Gomez-Luna, and Onur Mutlu,
-      <b>"SIMDRAM: An End-to-End Framework for Bit-Serial SIMD Computing in DRAM"</b>
-      Proceedings of the 26th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), Virtual, March-April 2021.`,
+      citation: `N. Hajinazar, <u>G. F. Oliveira</u>, J. D. Ferreira, N. M. Ghiasi, M. Patel, M. Alser, S. Ghose, J. Gómez-Luna, and O. Mutlu,
+      <b>"SIMDRAM: An End-to-End Framework for Bit-Serial SIMD Computing in DRAM,"</b>
+      in Proceedings of the 26th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), Virtual, March-April 2021.`,
       keywords: ['bulk bitwise operations', 'processing-in-memory', 'dram', 'memory'],
       awards: [],
       summary:`
@@ -195,7 +189,7 @@ module.exports = {
     {
       title: 'DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks',
       venue: 'IEEE Access 2021',
-      citation: '<u> Geraldo F. Oliveira </u>, Juan Gomez-Luna, Lois Orosa, Saugata Ghose, Nandita Vijaykumar, Ivan fernandez, Mohammad Sadrosadati and Onur Mutlu, <b>"DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks,"</b> IEEE Access, vol. 9, pp. 134457-134502, 2021.',
+      citation: '<u>G. F. Oliveira</u>, J. Gómez-Luna, L. Orosa, S. Ghose, N. Vijaykumar, I. Fernandez, M. Sadrosadati, and O. Mutlu, <b>"DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks,"</b> IEEE Access, vol. 9, pp. 134457-134502, 2021.',
       keywords: ['benchmarking', 'data movement',  'memory systems', 'dram', 'near-data processing', 'workload characterization'],
       awards: [],
       summary:`
@@ -219,7 +213,7 @@ module.exports = {
     {
       title: 'Employing Classification-based Algorithms for General-Purpose Approximate Computing',
       venue: 'DAC 2018',
-      citation: '<u>Geraldo F. Oliveira</u>, Larissa Rozales Gonçalves, Marcelo Brandalero, Antonio Carlos S. Beck and Luigi Carro, <b>"Employing Classification-based Algorithms for General-Purpose Approximate Computing,"</b> in Proceedings of the 55th Annual Design Automation Conference (DAC), San Francisco, CA, USA, 2018.',
+      citation: '<u>G. F. Oliveira</u>, L. R. Gonçalves, M. Brandalero, A. C. S. Beck, and L. Carro, <b>"Employing Classification-Based Algorithms for General-Purpose Approximate Computing,"</b> in Proceedings of the 55th Annual Design Automation Conference (DAC), San Francisco, CA, USA, 2018.',
       keywords: ['approximate computing', 'classification', 'decision trees'],
       summary:`
       Approximate computing has recently reemerged as a design solution for additional performance and energy improvements at the cost of output quality. In this paper, we propose using a tree-based classification algorithm as an approximation tool for general-purpose applications. We show that, without any hardware support, completely implemented in software, our approach can improve performance by up to 4x (1.95x on average) and reduce EDP by up to 19x (4.04x on average) when compared to precise executions. Besides that, in some cases, our software-based mechanism can even outperform traditional hardware-based Neural Network's state-of-the-art designs.
@@ -236,7 +230,7 @@ module.exports = {
     {
       title: 'NIM: An HMC-Based Machine for Neuron Computation',
       venue: 'ARC 2017',
-      citation: '<u>Geraldo F. Oliveira</u>, Paulo C. Santos, Marco A. Z. Alves and Luigi Carro, <b>"NIM: An HMC-Based Machine for Neuron Computation","</b> in Proceedings of the 13th International Symposium of pplied Reconfigurable Computing (ARC), Delft, The Netherlands, 2017.',
+      citation: '<u>G. F. Oliveira</u>, P. C. Santos, M. A. Z. Alves, and L. Carro, <b>"NIM: An HMC-Based Machine for Neuron Computation","</b> in Proceedings of the 13th International Symposium of pplied Reconfigurable Computing (ARC), Delft, The Netherlands, 2017.',
       keywords: ['processing-in-memory', 'near-data processing', 'neuron simulation', 'neural networks'],
       awards: [],
       summary:`
@@ -254,7 +248,7 @@ module.exports = {
     {
       title: 'A Generic Processing in Memory Cycle Accurate Simulator Under Hybrid Memory Cube Architecture',
       venue: 'SAMOS 2017',
-      citation: '<u>Geraldo F. Oliveira</u>, Paulo C. Santos, Marco A. Z. Alves and Luigi Carro, <b>"A Generic Processing in Memory Cycle Accurate Simulator Under Hybrid Memory Cube Architecture","</b> in Proceedings of the International Conference on Embedded Computer Systems: Architectures, Modeling, and Simulation (SAMOS), Pythagorion, Greece, 2017.',
+      citation: '<u>G. F. Oliveira</u>, P. C. Santos, M. A. Z. Alves, and L. Carro, <b>"A Generic Processing in Memory Cycle Accurate Simulator Under Hybrid Memory Cube Architecture","</b> in Proceedings of the International Conference on Embedded Computer Systems: Architectures, Modeling, and Simulation (SAMOS), Pythagorion, Greece, 2017.',
       keywords: ['processing-in-memory', 'near-data processing', 'simulator', 'hybrid memory cube', 'systemc'],
       awards: [],
       summary:`
@@ -355,9 +349,9 @@ module.exports = {
     {
       title: "UPMEM + ML",
       venue: "ISPASS, 2023",
-      citation: `J. Gómez-Luna, Y. Guo, S. Brocard, J. Legriel, R. Cimadomo, <u> G. F. Oliveira </u>, G. Singh, O. Mutlu
-      <b>"Evaluating Machine Learning Workloads on Memory-Centric Computing Systems"</b>
-      Proceedings of the 2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS), Raleigh, North Carolina, USA, April 2023.`,
+      citation: `J. Gómez-Luna, Y. Guo, S. Brocard, J. Legriel, R. Cimadomo, <u>G. F. Oliveira</u>, G. Singh, and O. Mutlu, 
+      <b>"Evaluating Machine Learning Workloads on Memory-Centric Computing Systems,"</b>
+      in Proceedings of the 2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS), Raleigh, North Carolina, USA, April 2023.`,
       keywords: ['machine learning', 'processing-in-memory', 'regression', 'classification', 'clustering', 'benchmarking'],
       sources:[
         {
@@ -379,7 +373,7 @@ module.exports = {
     {
       title: "TransPimLib",
       venue: "ISPASS, 2023",
-      citation: `M. Item, J. Gómez Luna, Y. Guo, <u> G. F. Oliveira </u>, M. Sadrosadati, O. Mutlu, <b>"TransPimLib: Efficient Transcendental Functions for Processing-in-Memory Systems"</b> Proceedings of the 2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS), Raleigh, North Carolina, USA, April 2023.`,
+      citation: `M. Item, J. Gómez Luna, Y. Guo, <u>G. F. Oliveira</u>, M. Sadrosadati, and O. Mutlu, <b>"TransPimLib: Efficient Transcendental Functions for Processing-in-Memory Systems,"</b> in Proceedings of the 2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS), Raleigh, North Carolina, USA, April 2023.`,
       keywords: ['transcendental functions', 'processing-in-memory', 'activation functions', 'machine learning'],
       sources:[
         {
@@ -401,9 +395,9 @@ module.exports = {
     {
       title: "pLUTo",
       venue: "MICRO, 2022",
-      citation: `J. D. Ferreira, G. Falcao, J. Gómez-Luna, M. Alser, L. Orosa, M. Sadrosadati, J. S. Kim, <u> G. F. Oliveira </u>, T. Shahroodi, A. Nori, O. Mutlu
-<b>"pLUTo: Enabling Massively Parallel Computation in DRAM via Lookup Tables"</b>
-Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Chicago, IL, USA, October 2022.`,
+      citation: `J. D. Ferreira, G. Falcao, J. Gómez-Luna, M. Alser, L. Orosa, M. Sadrosadati, J. S. Kim, <u>G. F. Oliveira</u>, T. Shahroodi, A. Nori, and O. Mutlu, 
+      <b>"pLUTo: Enabling Massively Parallel Computation in DRAM via Lookup Tables,"</b>
+      in Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Chicago, IL, USA, October 2022.`,
       keywords: ['processing-in-memory', 'lookup tables', 'dram'],
       sources:[
         {
@@ -425,9 +419,9 @@ Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Ch
     {
       title: "Flash-Cosmos",
       venue: "MICRO, 2022",
-      citation: `J. Park, R. Azizi, <u> >G. F. Oliveira </u>, M. Sadrosadati, R. Nadig, D. Novo, J. Gómez-Luna, M. Kim, O. Mutlu,
-<b>"Flash-Cosmos: In-Flash Bulk Bitwise Operations Using Inherent Computation Capability of NAND Flash Memory"</b>
-Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Chicago, IL, USA, October 2022.`,
+      citation: `J. Park, R. Azizi, <u>G. F. Oliveira</u>, M. Sadrosadati, R. Nadig, D. Novo, J. Gómez-Luna, M. Kim, and O. Mutlu,
+      <b>"Flash-Cosmos: In-Flash Bulk Bitwise Operations Using Inherent Computation Capability of NAND Flash Memory,"</b> 
+      in Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Chicago, IL, USA, October 2022.`,
       keywords: ['flash', 'characterization', 'boolean operations', 'processing-in-memory'],
       sources:[
         {
@@ -449,9 +443,9 @@ Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Ch
     {
       title: "RowHammer + Wordline Voltage Reduction",
       venue: "DSN 2022",
-      citation: `A. G. Yağlıkçı, H. Luo, <u> G. F. Oliveira </u>, A. Olgun, M. Patel, J. Park, H. Hassan, J. S. Kim, L. Orosa, O. Mutlu
-      <b>"Understanding RowHammer Under Reduced Wordline Voltage: An Experimental Study Using Real DRAM Devices"</b>
-      Proceedings of the 52nd Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Baltimore, MD, USA, June 2022.`,
+      citation: `A. G. Yağlıkçı, H. Luo, <u>G. F. Oliveira</u>, A. Olgun, M. Patel, J. Park, H. Hassan, J. S. Kim, L. Orosa, and O. Mutlu,
+      <b>"Understanding RowHammer Under Reduced Wordline Voltage: An Experimental Study Using Real DRAM Devices,"</b>
+      in Proceedings of the 52nd Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Baltimore, MD, USA, June 2022.`,
       keywords: ['security', 'rowhammer', 'characterization'],
       sources:[
         {
@@ -473,7 +467,7 @@ Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Ch
     {
       title: "Polynesia",
       venue: "ICDE, 2022",
-      citation: 'A. Boroumand, S. Ghose, <u> G. F. Oliveira </u>, O. Mutlu, <b>"Polynesia: Enabling High-Performance and Energy-Efficient Hybrid Transactional/Analytical Databases with Hardware/Software Co-Design,"</b> in Proceedings of the 38th International Conference on Data Engineering (ICDE), Virtual, May 2022.',
+      citation: 'A. Boroumand, S. Ghose, <u>G. F. Oliveira</u>, and O. Mutlu, <b>"Polynesia: Enabling High-Performance and Energy-Efficient Hybrid Transactional/Analytical Databases with Hardware/Software Co-Design,"</b> in Proceedings of the 38th International Conference on Data Engineering (ICDE), Virtual, May 2022.',
       keywords: ['processing-in-memory', 'databases', 'transaction', 'analytical', 'dram', 'hardware'],
       sources:[
         {
@@ -495,7 +489,7 @@ Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Ch
     {
       title: "HARP",
       venue: "MICRO, 2021",
-      citation: 'M. Patel, <u> G. F. Oliveira </u>, O. Mutlu, <b>"HARP: Practically and Effectively Identifying Uncorrectable Errors in Memory Chips That Use On-Die Error-Correcting Codes,"</b> in Proceedings of the 54th International Symposium on Microarchitecture (MICRO), Virtual, October 2021.',
+      citation: 'M. Patel, <u>G. F. Oliveira</u>, and O. Mutlu, <b>"HARP: Practically and Effectively Identifying Uncorrectable Errors in Memory Chips That Use On-Die Error-Correcting Codes,"</b> in Proceedings of the 54th International Symposium on Microarchitecture (MICRO), Virtual, October 2021.',
       keywords: ['on-die ecc', 'dram', 'memory test', 'repair', 'error profiling'],
       sources:[
         {
@@ -517,7 +511,7 @@ Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Ch
     {
       title: "Mensa",
       venue: "PACT, 2021",
-      citation: `A. Boroumand, S. Ghose, B. Akin, R. Narayanaswami,<u> G. F. Oliveira </u>, X. Ma, E. Shiu, O. Mutlu, <b>"Google Neural Network Models for Edge Devices: Analyzing and Mitigating Machine Learning Inference Bottlenecks,"</b> in Proceedings of the 30th International Conference on Parallel Architectures and Compilation Techniques (PACT), Virtual, September 2021.`,
+      citation: `A. Boroumand, S. Ghose, B. Akin, R. Narayanaswami, <u>G. F. Oliveira</u>, X. Ma, E. Shiu, and O. Mutlu, <b>"Google Neural Network Models for Edge Devices: Analyzing and Mitigating Machine Learning Inference Bottlenecks,"</b> in Proceedings of the 30th International Conference on Parallel Architectures and Compilation Techniques (PACT), Virtual, September 2021.`,
       keywords: ['machine learning', 'neural networks', 'edge tpu', 'memory', 'dram', 'bottlenecks'],
       sources:[
         {
@@ -539,7 +533,7 @@ Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Ch
     {
       title: "VBI",
       venue: "ISCA 2020",
-      citation: `N. Hajinazar, P. Patel, M. Patel, K. Kanellopoulos, S. Ghose, R. Ausavarungnirun, <u> G. F. Oliveira </u>, J. Appavoo, V. Seshadri, O. Mutlu, <b>"The Virtual Block Interface: A Flexible Alternative to the Conventional Virtual Memory Framework,"</b> in Proceedings of the 47th International Symposium on Computer Architecture (ISCA), Valencia, Spain, June 2020.`,
+      citation: `N. Hajinazar, P. Patel, M. Patel, K. Kanellopoulos, S. Ghose, R. Ausavarungnirun, <u>G. F. Oliveira</u>, J. Appavoo, V. Seshadri, and O. Mutlu, <b>"The Virtual Block Interface: A Flexible Alternative to the Conventional Virtual Memory Framework,"</b> in Proceedings of the 47th International Symposium on Computer Architecture (ISCA), Valencia, Spain, June 2020.`,
       keywords: ['virtual memory', 'reconfigurability', 'memory controller'],
       sources:[
         {
@@ -561,7 +555,7 @@ Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Ch
     {
       title: "NAPEL",
       venue: "DAC, 2019",
-      citation: `G. Singh, J. Gómez-Luna, G. Mariani, <u> G. F. Oliveira </u>, S. Corda, S. Stuijk, O. Mutlu, H. Corporaal, <b>"NAPEL: Near-Memory Computing Application Performance Prediction via Ensemble Learning,"</b> in Proceedings of the 56th Design Automation Conference (DAC), Las Vegas, NV, USA, June 2019.`,
+      citation: `G. Singh, J. Gómez-Luna, G. Mariani, <u>G. F. Oliveira</u>, S. Corda, S. Stuijk, and O. Mutlu, H. Corporaal, <b>"NAPEL: Near-Memory Computing Application Performance Prediction via Ensemble Learning,"</b> in Proceedings of the 56th Design Automation Conference (DAC), Las Vegas, NV, USA, June 2019.`,
       keywords: ['processing-in-memory', 'perforance prediction', 'ensemble learning'],
       sources:[
         {
@@ -575,7 +569,7 @@ Proceedings of the 55th International Symposium on Microarchitecture (MICRO), Ch
     {
       title: "RVU",
       venue: "DATE, 2017",
-      citation: `P. C. Santos, <u> G. F. Oliveira </u>, D. G. Tomé, M. A. Z. Alves, E. C. Almeida and L. Carro, <b>"Operand Size Reconfiguration for Big Data Processing in Memory,"</b> in Proceedings of the 2017 Design, Automation & Test in Europe Conference & Exhibition (DATE), Switzerland, March 2017.`,
+      citation: `P. C. Santos, <u>G. F. Oliveira</u>, D. G. Tomé, M. A. Z. Alves, E. C. Almeida and L. Carro, <b>"Operand Size Reconfiguration for Big Data Processing in Memory,"</b> in Proceedings of the 2017 Design, Automation & Test in Europe Conference & Exhibition (DATE), Switzerland, March 2017.`,
       keywords: ['processing-in-memory', 'databases', 'vector processing', 'hybrid memory cube'],
       sources:[
         {
