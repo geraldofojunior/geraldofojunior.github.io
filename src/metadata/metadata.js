@@ -75,6 +75,26 @@ module.exports = {
   ],
   ownpapers: [
     {
+      title: 'MIMDRAM: An End-to-End Processing-Using-DRAM System for High-Throughput, Energy-Efficient and Programmer-Transparent Multiple-Instruction Multiple-Data Computing',
+      venue: 'HPCA 2024',
+      citation: `<u>G. F. Oliveira</u>, A. Olgun, A. G. Yaglikci, F Bostanci, J. Gómez-Luna, S. Ghose, and Onur Mutlu, <b>"MIMDRAM: An End-to-End Processing-Using-DRAM System for High-Throughput, Energy-Efficient and Programmer-Transparent Multiple-Instruction Multiple-Data Computing","</b>
+      in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.`,
+      keywords: ['bulk bitwise operations', 'processing-in-memory', 'dram', 'memory'],
+      awards: [],
+      summary:`
+      In this work, we design a flexible PUD system that overcomes the limitations caused by the large and rigid granularity of processing-using-DRAM (PUD) systems. To this end, we propose MIMDRAM, a hardware/software co-designed PUD system that introduces new mechanisms to allocate and control only the necessary resources for a given PUD operation. The key idea of MIMDRAM is to leverage fine-grained DRAM (i.e., the ability to independently access smaller segments of a large DRAM row) for PUD computation. MIMDRAM exploits this key idea to enable a multiple-instruction multiple-data (MIMD) execution model in each DRAM subarray.
+      We evaluate MIMDRAM using twelve real-world applications and 495 multi-programmed application mixes. Our evaluation shows that MIMDRAM provides 34x the performance, 14.3x the energy efficiency, 1.7x the throughput, and 1.3x the fairness of a state-of-the-art PUD framework, along with 30.6x and 6.8x the energy efficiency of a high-end CPU and GPU, respectively. MIMDRAM adds small area cost to a DRAM chip (1.11%) and CPU die (0.6%).
+      `,
+      sources:[ 
+        {
+          text:'Full Paper',
+          urls: [
+            {type: 'file-pdf', url:'https://arxiv.org/pdf/2402.19080.pdf'}
+          ]
+        },
+      ]
+    },
+    {
       title: 'Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study',
       venue: 'IEEE Access 2023',
       citation: '<u>G. F. Oliveira</u>, S. Ghose, J. Gómez-Luna, A. Boroumand, A. Savery, S. Rao, S. Qazi, G. Grignou, R. Thakur, E. Shiu, and Onur Mutlu, <b>"Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study","</b> IEEE Access, 2023.',
@@ -346,6 +366,48 @@ module.exports = {
     }
   ],
   otherpapers: [
+    {
+      title: "FC-DRAM",
+      venue: "HPCA, 2024",
+      citation: `I. E. Yuksel, Y. C. Tugrul, A. Olgun, F. N. Bostanci, A. G. Yaglikci, <u> Geraldo F. Oliveira </u>, H. Luo, J. Gómez-Luna, M. Sadrosadati, and O. Mutlu, <b>"Functionally-Complete Boolean Logic in Real DRAM Chips: Experimental Characterization and Analysis,"</b> in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.`,
+      keywords: ['processing-in-memory', 'off-the-shelf DRAM', 'bulk-bitwise operations'],
+      sources:[
+        {
+          text:'Full Paper',
+          urls: [
+            {type: 'file-pdf', url:'https://arxiv.org/pdf/2402.18736.pdf'}                    
+          ]
+        }
+      ]
+    },
+    {
+      title: "Svard",
+      venue: "HPCA, 2024",
+      citation: `A. G. Yaglikci, Y. C. Tuğrul, <u>Geraldo F. Oliveira</u>, I. E. Yüksel, A. Olgun, H. Luo, and Onur Mutlu, <b>"Spatial Variation-Aware Read Disturbance Defenses: Experimental Analysis of Real DRAM Chips and Implications on Future Solutions,"</b> in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.`,
+      keywords: ['security', 'rowhammer', 'characterization'],
+      sources:[
+        {
+          text:'Full Paper',
+          urls: [
+            {type: 'file-pdf', url:'https://arxiv.org/pdf/2402.18652.pdf'}                    
+          ]
+        }
+      ]
+    },
+    {
+      title: "ABACuS",
+      venue: "USENIX Security, 2024",
+      citation: `A. Olgun, Y. C. Tugrul, N. Bostanci, I. E. Yuksel, H. Luo, S. Rhyner, A. G. Yaglikci, <u>Geraldo F. Oliveira</u>, and O. Mutlu, <b>"ABACuS: All-Bank Activation Counters for Scalable and Low Overhead RowHammer Mitigation,"</b> in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.`,
+      keywords: ['security', 'rowhammer', 'mitigation'],
+      sources:[
+        {
+          text:'Full Paper',
+          urls: [
+            {type: 'file-pdf', url:'https://www.usenix.org/system/files/sec23winter-prepub-21-olgun.pdf'}                    
+          ]
+        }
+      ]
+    },
     {
       title: "UPMEM + ML",
       venue: "ISPASS, 2023",
