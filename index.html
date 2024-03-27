@@ -83,6 +83,30 @@
     
     <h2 class="mb-4">First-Author Publications</h2>
     <div class="mb-4">
+        <h3 class="fs-4 fw-normal">MIMDRAM: An End-to-End Processing-Using-DRAM System for High-Throughput, Energy-Efficient and Programmer-Transparent Multiple-Instruction Multiple-Data Computing <span style="font-size: medium;">in HPCA 2024</span></h3>
+        
+        <div class="text-body border border-2", style="font-size: small; padding: 7px;"><b>Full Reference:</b> <u>G. F. Oliveira</u>, A. Olgun, A. G. Yaglikci, F Bostanci, J. Gómez-Luna, S. Ghose, and Onur Mutlu, <b>"MIMDRAM: An End-to-End Processing-Using-DRAM System for High-Throughput, Energy-Efficient and Programmer-Transparent Multiple-Instruction Multiple-Data Computing","</b>
+      in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.</div>
+        
+        <p>
+      In this work, we design a flexible PUD system that overcomes the limitations caused by the large and rigid granularity of processing-using-DRAM (PUD) systems. To this end, we propose MIMDRAM, a hardware/software co-designed PUD system that introduces new mechanisms to allocate and control only the necessary resources for a given PUD operation. The key idea of MIMDRAM is to leverage fine-grained DRAM (i.e., the ability to independently access smaller segments of a large DRAM row) for PUD computation. MIMDRAM exploits this key idea to enable a multiple-instruction multiple-data (MIMD) execution model in each DRAM subarray.
+      We evaluate MIMDRAM using twelve real-world applications and 495 multi-programmed application mixes. Our evaluation shows that MIMDRAM provides 34x the performance, 14.3x the energy efficiency, 1.7x the throughput, and 1.3x the fairness of a state-of-the-art PUD framework, along with 30.6x and 6.8x the energy efficiency of a high-end CPU and GPU, respectively. MIMDRAM adds small area cost to a DRAM chip (1.11%) and CPU die (0.6%).
+      </p>
+
+        <div>
+            <span class="badge text-body border border-2">Full Paper:
+                <a href="https://arxiv.org/pdf/2402.19080.pdf"><i class="fa-solid fa-file-pdf"></i></a> 
+            </span>
+        </div>
+
+        <div>
+            <span class="badge text-body border border-1">bulk bitwise operations</span>
+            <span class="badge text-body border border-1">processing-in-memory</span>
+            <span class="badge text-body border border-1">dram</span>
+            <span class="badge text-body border border-1">memory</span>
+        </div> 
+    </div>
+    <div class="mb-4">
         <h3 class="fs-4 fw-normal">Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study <span style="font-size: medium;">in IEEE Access 2023</span></h3>
         
         <div class="text-body border border-2", style="font-size: small; padding: 7px;"><b>Full Reference:</b> <u>G. F. Oliveira</u>, S. Ghose, J. Gómez-Luna, A. Boroumand, A. Savery, S. Rao, S. Qazi, G. Grignou, R. Thakur, E. Shiu, and Onur Mutlu, <b>"Extending Memory Capacity in Consumer Devices with Emerging Non-Volatile Memory: An Experimental Study","</b> IEEE Access, 2023.</div>
@@ -521,6 +545,99 @@
     </div>
 
     <h2 class="mb-4">Other Publications</h2>
+    <div class="screen">
+        <div class="row d-block d-md-flex">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <p><b>FC-DRAM</b> [HPCA, 2024]<br>
+                    <span class="badge text-body border border-1">processing-in-memory</span>
+                    <span class="badge text-body border border-1">off-the-shelf DRAM</span>
+                    <span class="badge text-body border border-1">bulk-bitwise operations</span>
+                </p>
+            </div>
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <p class="text-body", style="font-size: medium; padding: 7px;">I. E. Yuksel, Y. C. Tugrul, A. Olgun, F. N. Bostanci, A. G. Yaglikci, <u> Geraldo F. Oliveira </u>, H. Luo, J. Gómez-Luna, M. Sadrosadati, and O. Mutlu, <b>"Functionally-Complete Boolean Logic in Real DRAM Chips: Experimental Characterization and Analysis,"</b> in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.
+                    <span class="badge text-body border border-2">Full Paper:
+                        <a href="https://arxiv.org/pdf/2402.18736.pdf"><i class="fa-solid fa-file-pdf"></i></a> 
+                    </span>
+                </p>
+                 
+            </div>
+        </div>
+    </div>
+    <div class="print">
+        <div class="row d-block d-md-flex">
+            <div class="col-12">
+                <p class="text-body", style="font-size: small;">I. E. Yuksel, Y. C. Tugrul, A. Olgun, F. N. Bostanci, A. G. Yaglikci, <u> Geraldo F. Oliveira </u>, H. Luo, J. Gómez-Luna, M. Sadrosadati, and O. Mutlu, <b>"Functionally-Complete Boolean Logic in Real DRAM Chips: Experimental Characterization and Analysis,"</b> in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.
+                    <span class="badge text-body border border-2">Full Paper:
+                        <a href="https://arxiv.org/pdf/2402.18736.pdf"><i class="fa-solid fa-file-pdf"></i></a> 
+                    </span>
+                </p>
+                 
+            </div>
+        </div>
+    </div>
+    <div class="screen">
+        <div class="row d-block d-md-flex">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <p><b>Svard</b> [HPCA, 2024]<br>
+                    <span class="badge text-body border border-1">security</span>
+                    <span class="badge text-body border border-1">rowhammer</span>
+                    <span class="badge text-body border border-1">characterization</span>
+                </p>
+            </div>
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <p class="text-body", style="font-size: medium; padding: 7px;">A. G. Yaglikci, Y. C. Tuğrul, <u>Geraldo F. Oliveira</u>, I. E. Yüksel, A. Olgun, H. Luo, and Onur Mutlu, <b>"Spatial Variation-Aware Read Disturbance Defenses: Experimental Analysis of Real DRAM Chips and Implications on Future Solutions,"</b> in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.
+                    <span class="badge text-body border border-2">Full Paper:
+                        <a href="https://arxiv.org/pdf/2402.18652.pdf"><i class="fa-solid fa-file-pdf"></i></a> 
+                    </span>
+                </p>
+                 
+            </div>
+        </div>
+    </div>
+    <div class="print">
+        <div class="row d-block d-md-flex">
+            <div class="col-12">
+                <p class="text-body", style="font-size: small;">A. G. Yaglikci, Y. C. Tuğrul, <u>Geraldo F. Oliveira</u>, I. E. Yüksel, A. Olgun, H. Luo, and Onur Mutlu, <b>"Spatial Variation-Aware Read Disturbance Defenses: Experimental Analysis of Real DRAM Chips and Implications on Future Solutions,"</b> in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.
+                    <span class="badge text-body border border-2">Full Paper:
+                        <a href="https://arxiv.org/pdf/2402.18652.pdf"><i class="fa-solid fa-file-pdf"></i></a> 
+                    </span>
+                </p>
+                 
+            </div>
+        </div>
+    </div>
+    <div class="screen">
+        <div class="row d-block d-md-flex">
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <p><b>ABACuS</b> [USENIX Security, 2024]<br>
+                    <span class="badge text-body border border-1">security</span>
+                    <span class="badge text-body border border-1">rowhammer</span>
+                    <span class="badge text-body border border-1">mitigation</span>
+                </p>
+            </div>
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <p class="text-body", style="font-size: medium; padding: 7px;">A. Olgun, Y. C. Tugrul, N. Bostanci, I. E. Yuksel, H. Luo, S. Rhyner, A. G. Yaglikci, <u>Geraldo F. Oliveira</u>, and O. Mutlu, <b>"ABACuS: All-Bank Activation Counters for Scalable and Low Overhead RowHammer Mitigation,"</b> in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.
+                    <span class="badge text-body border border-2">Full Paper:
+                        <a href="https://www.usenix.org/system/files/sec23winter-prepub-21-olgun.pdf"><i class="fa-solid fa-file-pdf"></i></a> 
+                    </span>
+                </p>
+                 
+            </div>
+        </div>
+    </div>
+    <div class="print">
+        <div class="row d-block d-md-flex">
+            <div class="col-12">
+                <p class="text-body", style="font-size: small;">A. Olgun, Y. C. Tugrul, N. Bostanci, I. E. Yuksel, H. Luo, S. Rhyner, A. G. Yaglikci, <u>Geraldo F. Oliveira</u>, and O. Mutlu, <b>"ABACuS: All-Bank Activation Counters for Scalable and Low Overhead RowHammer Mitigation,"</b> in Proceedings of the International Symposium on High-Performance Computer Architecture (HPCA), Edinburgh, Scotland, 2024.
+                    <span class="badge text-body border border-2">Full Paper:
+                        <a href="https://www.usenix.org/system/files/sec23winter-prepub-21-olgun.pdf"><i class="fa-solid fa-file-pdf"></i></a> 
+                    </span>
+                </p>
+                 
+            </div>
+        </div>
+    </div>
     <div class="screen">
         <div class="row d-block d-md-flex">
             <div class="col-md-3 col-sm-12 col-xs-12">
@@ -985,7 +1102,7 @@
 
     <hline>
     <p>
-        <time datetime="" class="small">Last update: September 20, 2023</time>
+        <time datetime="" class="small">Last update: March 27, 2024</time>
     </p>
 </div>
 
