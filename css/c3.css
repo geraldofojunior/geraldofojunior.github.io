@@ -1,0 +1,7 @@
+/* Option C, v3 (2026-11-20): the user's new portrait. Loads after C v2's stylesheet; tweaks for this photo only. */
+
+/* phones: no portrait (user 2026-11-20); the page opens with the name */
+@media (max-width: 47em) {
+  .v-c3 .rail-photo { display: none; }
+  .v-c3 h1 { margin-top: 40px; }   /* the space the photo had above it */
+}

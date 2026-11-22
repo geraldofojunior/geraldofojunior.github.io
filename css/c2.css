@@ -1,0 +1,40 @@
+/* Option C, v2 (2026-11-20): the white-background portrait, integrated into the layout.
+   The photo is as wide as the rail's text, its top lines up with the statement, and it fades into the page at the
+   bottom, so the suit ends in the paper instead of at a hard edge. Loads after the base stylesheet, B's and C's. */
+
+.v-c2 .rail { padding-top: 64px; }
+.v-c2 .rail-photo img,
+.v-c2 .hero-photo img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 50% 0;
+  /* the suit dissolves at the bottom and at both shoulders, so no edge of the photo is a straight cut */
+  -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 96%),
+                      linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, #000 50%, transparent 96%),
+              linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%);
+  mask-composite: intersect;
+}
+.v-c2 .rail-photo img { width: clamp(136px, calc(30vh - 56px), 208px); margin-left: -8px; }
+.v-c2 h1 { margin-top: 2px; }
+
+/* second placement: the photo stands beside the statement, between the rail and the text */
+.v-c2 .hero { position: relative; }
+.v-c2 .hero-photo { display: none; }
+@media (min-width: 68.0625em) {
+  .v-c2.photo-margin .rail-photo { display: none; }
+  .v-c2.photo-margin .rail { padding-top: 76px; }
+  .v-c2.photo-margin h1 { margin-top: 0; }
+  /* hangs in the margin column like the venues of the papers: same right edge, the head level with the statement */
+  .v-c2.photo-margin .hero-photo { display: block; position: absolute; top: -8px; right: calc(100% + var(--mgap)); width: 176px; }
+  .v-c2.photo-margin .hero-photo img { width: 100%; }
+}
+
+@media (max-width: 68em) {
+  .v-c2 .rail-photo img { width: 150px; margin-left: -4px; }
+  .v-c2 h1 { margin-top: 0; }
+}
+@media (max-width: 47em) {
+  .v-c2 .rail-photo img { width: 136px; }
+}

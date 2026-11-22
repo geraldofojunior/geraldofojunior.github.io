@@ -1,0 +1,6 @@
+/* Option C, v4 (2026-11-20): the live subarray on the page's columns. motion_c4.js draws the dots across the text
+   column and hangs the row labels in the margin; here the legend starts with the text, like the step above it. */
+.v-c4 .live-legend { padding-left: calc(var(--margin) + var(--mgap)); }
+@media (max-width: 47em) {
+  .v-c4 .live-legend { padding-left: 0; }
+}
