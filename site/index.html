@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geraldo F. Oliveira | Memory systems for AI</title>
+  <meta name="description" content="Geraldo F. Oliveira, Senior Researcher at Huawei Zurich Research Center. I build memory systems for AI, with high bandwidth flash for LLM inference. Before that, I worked on processing-in-memory at ETH Zürich.">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Geraldo F. Oliveira">
+  <meta property="og:description" content="Senior Researcher at Huawei Zurich Research Center. I build memory systems for AI.">
+  <meta property="og:url" content="https://geraldofojunior.github.io/">
+  <meta property="og:image" content="https://geraldofojunior.github.io/assets/photo-square.jpg">
+  <link rel="canonical" href="https://geraldofojunior.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Geraldo F. Oliveira",
+    "alternateName": "Geraldo Francisco de Oliveira Junior",
+    "jobTitle": "Senior Researcher",
+    "worksFor": { "@type": "Organization", "name": "Huawei Zurich Research Center" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "ETH Zürich" },
+      { "@type": "CollegeOrUniversity", "name": "Federal University of Rio Grande do Sul" },
+      { "@type": "CollegeOrUniversity", "name": "Federal University of Viçosa" }
+    ],
+    "url": "https://geraldofojunior.github.io/",
+    "image": "https://geraldofojunior.github.io/assets/photo-square.jpg",
+    "sameAs": [
+      "https://github.com/geraldofojunior",
+      "https://dblp.org/pid/197/9584.html",
+      "https://www.linkedin.com/in/geraldo-francisco-de-oliveira-junior-966b48113/",
+      "https://twitter.com/geraldofojunior"
+    ]
+  }
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="wordmark" href="#top">Geraldo F. Oliveira</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#experience">Experience</a></li>
+      </ul>
+      <span class="nav-marker" aria-hidden="true"></span>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================================================================== masthead -->
+  <section class="wrap masthead" id="top" aria-labelledby="name">
+    <div class="mast-text">
+      <h1 id="name">Geraldo F. Oliveira</h1>
+      <p class="role">Senior Researcher at Huawei Zurich Research Center</p>
+      <p class="lede">I build memory systems for AI. My current work is on high bandwidth flash (HBF), an emerging
+        3D-stacked NAND flash memory that puts terabytes of capacity next to the accelerator. With HBF, a single
+        accelerator or a small node can serve larger language models.</p>
+      <p class="previously">Before Huawei, I did my Ph.D. and a postdoc in Onur Mutlu’s
+        <a href="https://safari.ethz.ch">SAFARI Research Group</a> at ETH Zürich. I worked on processing-in-memory
+        (PIM) across the stack, from computing inside DRAM chips to the programming models and compilers that make it
+        usable.</p>
+      <p class="profiles">
+        <a href="https://github.com/geraldofojunior">GitHub</a>
+        <a href="https://dblp.org/pid/197/9584.html">DBLP</a>
+        <a href="https://www.linkedin.com/in/geraldo-francisco-de-oliveira-junior-966b48113/">LinkedIn</a>
+        <a href="https://twitter.com/geraldofojunior">X</a>
+      </p>
+    </div>
+    <picture class="portrait">
+      <source type="image/webp" srcset="assets/photo-480.webp 480w, assets/photo-720.webp 720w" sizes="(min-width: 860px) 224px, 144px">
+      <img src="assets/photo-480.jpg" srcset="assets/photo-480.jpg 480w, assets/photo-720.jpg 720w"
+           sizes="(min-width: 860px) 224px, 144px" width="480" height="640" alt="Portrait of Geraldo F. Oliveira">
+    </picture>
+  </section>
+
+  <!-- ===================================================================== where the work acts -->
+  <!-- One drawing of the hardware, from an AI accelerator package down to the rows of a DRAM subarray. Each research
+       topic is placed on the part it changes; pointing at a topic (or focusing its link) marks that part. -->
+  <figure class="wrap system" id="system" data-active="mem" aria-labelledby="system-cap">
+    <div class="panels">
+
+      <div class="panel" style="--w:260">
+        <p class="panel-title">AI accelerator package</p>
+        <svg class="panel-svg" viewBox="0 0 260 200" aria-hidden="true">
+          <rect class="board" x="0" y="18" width="260" height="164"/>
+          <g class="stack"><rect x="20" y="36" width="56" height="58"/><path d="M20 50.5h56M20 65h56M20 79.5h56"/></g>
+          <g class="stack"><rect x="20" y="106" width="56" height="58"/><path d="M20 120.5h56M20 135h56M20 149.5h56"/></g>
+          <g class="stack hl" data-topic="mem"><rect x="184" y="36" width="56" height="58"/><path d="M184 50.5h56M184 65h56M184 79.5h56"/></g>
+          <g class="stack hl" data-topic="mem"><rect x="184" y="106" width="56" height="58"/><path d="M184 120.5h56M184 135h56M184 149.5h56"/></g>
+          <rect class="die" x="92" y="36" width="76" height="128"/>
+          <text x="48" y="31" class="lbl" text-anchor="middle">HBM</text>
+          <text x="130" y="104.5" class="lbl" text-anchor="middle">Accelerator</text>
+          <text x="212" y="31" class="lbl hl-text" data-topic="mem" text-anchor="middle">HBF</text>
+        </svg>
+        <ul class="panel-topics">
+          <li><a href="#t-mem" data-topic="mem">Memory systems for AI</a><span>FLINT</span></li>
+        </ul>
+      </div>
+
+      <div class="panel-gap" style="--w:36" aria-hidden="true"></div>
+
+      <div class="panel" style="--w:300">
+        <p class="panel-title">Processor and memory</p>
+        <svg class="panel-svg" viewBox="0 0 300 200" aria-hidden="true">
+          <rect class="die" x="8" y="62" width="70" height="76"/>
+          <text x="43" y="104.5" class="lbl" text-anchor="middle">CPU</text>
+          <g class="bus hl" data-topic="dm">
+            <path d="M78 88h76M78 94h76M78 100h76M78 106h76M78 112h76"/>
+            <rect x="154" y="58" width="5" height="84"/>
+            <path d="M159 65h9M159 135h9"/>
+          </g>
+          <text x="116" y="80" class="lbl hl-text" data-topic="dm" text-anchor="middle">Channel</text>
+          <rect class="module" x="168" y="40" width="124" height="50"/>
+          <rect class="chip" x="176" y="50" width="22" height="30"/><rect class="chip" x="204" y="50" width="22" height="30"/><rect class="chip" x="232" y="50" width="22" height="30"/><rect class="chip zoom-src" x="260" y="50" width="22" height="30"/>
+          <path class="zoom-line" d="M282 50H300M282 80H300"/>
+          <g class="hl" data-topic="prog">
+            <rect class="module" x="168" y="110" width="124" height="50"/>
+            <rect class="chip" x="176" y="120" width="22" height="30"/><rect class="core" x="181" y="134" width="12" height="10"/><rect class="chip" x="204" y="120" width="22" height="30"/><rect class="core" x="209" y="134" width="12" height="10"/><rect class="chip" x="232" y="120" width="22" height="30"/><rect class="core" x="237" y="134" width="12" height="10"/><rect class="chip" x="260" y="120" width="22" height="30"/><rect class="core" x="265" y="134" width="12" height="10"/>
+          </g>
+          <text x="230" y="33" class="lbl" text-anchor="middle">DRAM module</text>
+          <text x="230" y="177" class="lbl hl-text" data-topic="prog" text-anchor="middle">PIM module</text>
+        </svg>
+        <ul class="panel-topics">
+          <li><a href="#t-dm" data-topic="dm">Data movement</a><span>DAMOV</span></li>
+          <li><a href="#t-prog" data-topic="prog">Programming support</a><span>DaPPA, TransPimLib</span></li>
+        </ul>
+      </div>
+
+      <svg class="zoom" style="--w:28" viewBox="0 0 28 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 50L28 18M0 80L28 182"/>
+      </svg>
+
+      <div class="panel" style="--w:216">
+        <p class="panel-title">DRAM bank</p>
+        <svg class="panel-svg" viewBox="0 0 216 200" aria-hidden="true">
+          <rect class="board" x="0" y="18" width="216" height="164"/>
+          <rect class="decoder" x="8" y="28" width="15" height="118"/>
+          <rect class="array" x="28" y="30" width="116" height="26"/>
+          <path class="wl" d="M28 36.5h116"/>
+          <path class="wl" d="M28 43.0h116"/>
+          <path class="wl" d="M28 49.5h116"/>
+          <rect class="sa" x="28" y="56" width="116" height="6"/>
+          <rect class="array" x="28" y="68" width="116" height="26"/>
+          <path class="wl" d="M28 74.5h116"/>
+          <g class="row hl" data-topic="rel"><path class="wl" d="M28 81.0h116"/></g>
+          <path class="wl" d="M28 87.5h116"/>
+          <rect class="sa" x="28" y="94" width="116" height="6"/>
+          <rect class="array" x="28" y="106" width="116" height="26"/>
+          <path class="wl" d="M28 112.5h116"/>
+          <path class="wl" d="M28 119.0h116"/>
+          <path class="wl" d="M28 125.5h116"/>
+          <rect class="sa" x="28" y="132" width="116" height="6"/>
+          <rect class="zoom-src" x="26" y="104" width="120" height="36"/>
+          <path class="zoom-line" d="M146 104H216M146 140H216"/>
+          <rect class="decoder" x="28" y="148" width="116" height="16"/>
+          <text x="86" y="160" class="lbl sm in" text-anchor="middle">Global row buffer</text>
+          <text x="15.5" y="87" class="lbl sm in" text-anchor="middle" transform="rotate(-90 15.5 87)">Row decoder</text>
+          <path class="leader" d="M145 59h4M145 81h4M147 122h4"/>
+          <text x="152" y="56.5" class="lbl sm">Sense</text>
+          <text x="152" y="68.5" class="lbl sm">amplifiers</text>
+          <text x="152" y="85" class="lbl sm hl-text" data-topic="rel">Row</text>
+          <text x="154" y="126" class="lbl sm">Subarray</text>
+        </svg>
+        <ul class="panel-topics">
+          <li><a href="#t-rel" data-topic="rel">Reliability and security</a><span>Chronus, Svärd, ABACuS</span></li>
+        </ul>
+      </div>
+
+      <svg class="zoom" style="--w:28" viewBox="0 0 28 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 104L28 18M0 140L28 182"/>
+      </svg>
+
+      <div class="panel" style="--w:260">
+        <p class="panel-title">DRAM subarray</p>
+        <svg class="panel-svg" viewBox="0 0 260 200" aria-hidden="true">
+          <rect class="board" x="0" y="18" width="260" height="164"/>
+          <rect class="decoder" x="10" y="38" width="15" height="104"/>
+          <path class="bl" d="M50 38V143M80 38V143M110 38V143M140 38V143M170 38V143M200 38V143"/>
+          <g class="row"><path class="wl" d="M25 50H208"/><circle class="cell" cx="50" cy="50" r="6"/><circle class="cell" cx="80" cy="50" r="6"/><circle class="cell" cx="110" cy="50" r="6"/><circle class="cell" cx="140" cy="50" r="6"/><circle class="cell" cx="170" cy="50" r="6"/><circle class="cell" cx="200" cy="50" r="6"/></g>
+          <g class="row hl" data-topic="pum"><path class="wl" d="M25 70H208"/><circle class="cell" cx="50" cy="70" r="6"/><circle class="cell" cx="80" cy="70" r="6"/><circle class="cell" cx="110" cy="70" r="6"/><circle class="cell" cx="140" cy="70" r="6"/><circle class="cell" cx="170" cy="70" r="6"/><circle class="cell" cx="200" cy="70" r="6"/></g>
+          <g class="row hl" data-topic="pum"><path class="wl" d="M25 90H208"/><circle class="cell" cx="50" cy="90" r="6"/><circle class="cell" cx="80" cy="90" r="6"/><circle class="cell" cx="110" cy="90" r="6"/><circle class="cell" cx="140" cy="90" r="6"/><circle class="cell" cx="170" cy="90" r="6"/><circle class="cell" cx="200" cy="90" r="6"/></g>
+          <g class="row hl" data-topic="pum"><path class="wl" d="M25 110H208"/><circle class="cell" cx="50" cy="110" r="6"/><circle class="cell" cx="80" cy="110" r="6"/><circle class="cell" cx="110" cy="110" r="6"/><circle class="cell" cx="140" cy="110" r="6"/><circle class="cell" cx="170" cy="110" r="6"/><circle class="cell" cx="200" cy="110" r="6"/></g>
+          <g class="row"><path class="wl" d="M25 130H208"/><circle class="cell" cx="50" cy="130" r="6"/><circle class="cell" cx="80" cy="130" r="6"/><circle class="cell" cx="110" cy="130" r="6"/><circle class="cell" cx="140" cy="130" r="6"/><circle class="cell" cx="170" cy="130" r="6"/><circle class="cell" cx="200" cy="130" r="6"/></g>
+          <g class="hl" data-topic="pum"><rect class="sa" x="43" y="143" width="14" height="11"/><rect class="sa" x="73" y="143" width="14" height="11"/><rect class="sa" x="103" y="143" width="14" height="11"/><rect class="sa" x="133" y="143" width="14" height="11"/><rect class="sa" x="163" y="143" width="14" height="11"/><rect class="sa" x="193" y="143" width="14" height="11"/></g>
+          <text x="17.5" y="90" class="lbl sm in" text-anchor="middle" transform="rotate(-90 17.5 90)">Row decoder</text>
+          <text x="200" y="33" class="lbl sm" text-anchor="middle">Bitline</text>
+          <text x="211" y="54" class="lbl sm">Wordline</text>
+          <text x="125" y="172" class="lbl sm hl-text" data-topic="pum" text-anchor="middle">Sense amplifiers</text>
+        </svg>
+        <ul class="panel-topics">
+          <li><a href="#t-pum" data-topic="pum">Computing inside memory</a><span>SIMDRAM, MIMDRAM, Proteus, PipeDRAM</span></li>
+        </ul>
+      </div>
+    </div>
+    <figcaption id="system-cap">Where my research acts: in the memory next to an AI accelerator, on the channel between
+      processor and memory, and inside the DRAM chip.</figcaption>
+  </figure>
+
+  <!-- ===================================================================== recent papers -->
+  <section class="wrap block" id="recent" aria-labelledby="recent-title">
+    <div class="opener">
+      <h2 id="recent-title">Recent papers</h2>
+      <a class="opener-aside" href="#publications">All publications</a>
+    </div>
+    <ol class="rows recent-list">
+      <li class="entry is-lead">
+        <p class="entry-key"><span class="venue">HPCA 2027</span><span class="note">To appear</span></p>
+        <div class="entry-main">
+          <h3 class="entry-name"><a href="https://arxiv.org/abs/2608.25062">FLINT</a></h3>
+          <p class="entry-title">Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration</p>
+          <p class="entry-desc">FLINT holds LLM weights in HBF, next to HBM. It reads the flash at high bandwidth, keeps refresh
+            off the inference path, and replaces SSD-style support for arbitrary writes with a compact read-only
+            translation table.</p>
+        </div>
+        <p class="entry-links"><a href="https://arxiv.org/abs/2608.25062">Paper</a><a href="https://doi.org/10.1109/LCA.2026.3729746">Letter, IEEE CAL 2026</a></p>
+      </li>
+      <li class="entry">
+        <p class="entry-key"><span class="venue">MICRO 2026</span></p>
+        <div class="entry-main">
+          <h3 class="entry-name"><a href="https://arxiv.org/abs/2609.30998">PipeDRAM</a></h3>
+          <p class="entry-title">A Data-Transposition-Free Processing-Using-DRAM Architecture with Hardware/Software Pipelining</p>
+        </div>
+        <p class="entry-links"><a href="https://arxiv.org/abs/2609.30998">Paper</a><a href="https://github.com/CMU-SAFARI/PipeDRAM">Code</a></p>
+      </li>
+      <li class="entry">
+        <p class="entry-key"><span class="venue">ICCD 2026</span></p>
+        <div class="entry-main">
+          <h3 class="entry-name"><a href="https://arxiv.org/abs/2310.10168">DaPPA</a></h3>
+          <p class="entry-title">A Unified Data-Parallel Programming Framework for Efficient Processing-in-Memory Execution</p>
+        </div>
+        <p class="entry-links"><a href="https://arxiv.org/abs/2310.10168">Paper</a><a href="https://github.com/CMU-SAFARI/DaPPA">Code</a></p>
+      </li>
+      <li class="entry">
+        <p class="entry-key"><span class="venue">ICS 2025</span></p>
+        <div class="entry-main">
+          <h3 class="entry-name"><a href="https://arxiv.org/abs/2501.17466">Proteus</a></h3>
+          <p class="entry-title">Achieving High-Performance Processing-Using-DRAM via Dynamic Precision Bit-Serial Arithmetic</p>
+        </div>
+        <p class="entry-links"><a href="https://arxiv.org/abs/2501.17466">Paper</a><a href="https://github.com/CMU-SAFARI/Proteus">Code</a><a href="https://youtu.be/GFJAWzUw6s4">Talk</a></p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===================================================================== research -->
+  <section class="wrap block" id="research" aria-labelledby="research-title">
+    <div class="opener">
+      <h2 id="research-title">Research</h2>
+    </div>
+    <p class="block-intro">Moving data between processors and memory limits both performance and energy efficiency. My work
+      has three threads: memory systems for AI, understanding data movement, and computing inside memory. With
+      colleagues, I also work on DRAM reliability and security, near-data processing for applications, and programming
+      and system support for PIM.</p>
+
+    <article class="thread" id="t-mem" aria-labelledby="t-mem-h">
+      <h3 id="t-mem-h">Memory systems for AI</h3>
+      <p class="thread-intro">LLM inference is increasingly limited by the memory capacity of the accelerator rather than by
+        its compute. At Huawei, I work on adding that capacity with high bandwidth flash.</p>
+      <ol class="rows">
+        <li class="entry">
+          <p class="entry-key"><span class="pname">FLINT</span><span class="venue">HPCA 2027</span></p>
+          <div class="entry-main">
+            <p class="entry-desc">Stores LLM weights in HBF, next to HBM. A hardware burst-buffer controller coalesces and
+              pipelines HBF reads, using the existing NAND flash buffers, to keep bandwidth high. A phantom-plane refresh
+              mechanism moves refresh off the critical inference path, and a read-only flash translation layer maps the
+              weights to HBF locations with a compact table.</p>
+          </div>
+          <p class="entry-links"><a href="https://arxiv.org/abs/2608.25062">Paper</a><a href="https://doi.org/10.1109/LCA.2026.3729746">Letter, IEEE CAL 2026</a></p>
+        </li>
+      </ol>
+      <p class="related"><span class="related-head">Related</span> Bulk bitwise operations inside NAND flash
+        (<a href="https://arxiv.org/abs/2209.05566">Flash-Cosmos, MICRO 2022</a>), processing-in-DRAM for neural network
+        inference from the edge to the cloud (<a href="https://arxiv.org/abs/2209.08938">IEEE Micro 2022</a>), the machine
+        learning inference bottlenecks of Google’s edge models (<a href="https://arxiv.org/abs/2109.14320">Mensa, PACT
+        2021</a>), and neural network computation inside a Hybrid Memory Cube
+        (<a href="https://doi.org/10.1007/978-3-319-56258-2_3">NIM, ARC 2017</a>).</p>
+    </article>
+
+    <article class="thread" id="t-dm" aria-labelledby="t-dm-h">
+      <h3 id="t-dm-h">Understanding data movement</h3>
+      <p class="thread-intro">Before changing the hardware, I measure where time and energy go, in real applications and on
+        real systems.</p>
+      <ol class="rows">
+        <li class="entry">
+          <p class="entry-key"><span class="pname">DAMOV</span><span class="venue">IEEE Access 2021</span></p>
+          <div class="entry-main">
+            <p class="entry-desc">A methodology and benchmark suite for data movement bottlenecks. We characterized 77K
+              functions across 345 applications, classified them by the sources of their data movement, and selected 144
+              of them as the first open-source benchmark suite for main-memory data movement studies. A case study with
+              near-data processing shows which fix suits each kind of bottleneck.</p>
+          </div>
+          <p class="entry-links"><a href="https://arxiv.org/abs/2105.03725">Paper</a><a href="https://github.com/CMU-SAFARI/DAMOV">Code</a><a href="https://www.youtube.com/watch?v=HkMYuYMuZOg">Talk</a></p>
+        </li>
+      </ol>
+      <p class="related"><span class="related-head">Related</span> Methodologies and tools for PIM
+        (<a href="https://arxiv.org/abs/2205.14647">ISVLSI 2022</a>), a characterization of UPMEM, the first commercial PIM
+        system (<a href="https://arxiv.org/abs/2105.03814">IEEE Access 2022</a>), and an experimental study of emerging
+        non-volatile memory for more memory capacity in consumer devices
+        (<a href="https://arxiv.org/abs/2111.02325">IEEE Access 2023</a>).</p>
+    </article>
+
+    <article class="thread" id="t-pum" aria-labelledby="t-pum-h">
+      <h3 id="t-pum-h">Computing inside memory</h3>
+      <p class="thread-intro">Processing-using-DRAM computes with the DRAM arrays themselves, so the data never leaves the
+        memory chip. SIMDRAM, MIMDRAM, Proteus, and PipeDRAM each remove a limitation of the one before.</p>
+
+      <figure class="live" id="live">
+        <div class="live-head">
+          <p class="live-step" aria-hidden="true">S = A + B in every column</p>
+          <button class="live-toggle" type="button" hidden>Pause</button>
+        </div>
+        <svg class="live-svg" role="img" aria-label="Animation: a DRAM subarray adds two 4-bit numbers in every column at once, one bit position at a time."></svg>
+        <figcaption class="live-legend">
+          <span><span class="lg-cell is-one"></span>1 in A or B</span>
+          <span><span class="lg-cell is-res"></span>1 in the carry or S</span>
+          <span><span class="lg-cell"></span>0</span>
+          <span><span class="lg-wl"></span>Activated rows</span>
+          <span class="live-hint" hidden>Point at a column to see its sum.</span>
+        </figcaption>
+        <div class="live-text">
+          <p>Each column stores two 4-bit numbers, A and B, one bit per row. Activating the rows of one bit position
+            computes that bit of the sum S, and the new carry, in every column at once. A subarray has thousands of
+            columns, so it adds thousands of pairs without moving the data off the chip.</p>
+          <p>SIMDRAM, MIMDRAM, and Proteus compute on this vertical layout. PipeDRAM computes on the horizontal layout that
+            CPUs use, so data is never transposed.</p>
+        </div>
+      </figure>
+
+      <ol class="rows lineage">
+        <li class="entry">
+          <p class="entry-key"><span class="pname">SIMDRAM</span><span class="venue">ASPLOS 2021</span></p>
+          <div class="entry-main">
+            <p class="entry-desc">Builds arbitrary operations from in-DRAM majority and NOT, and runs them one bit at a time
+              across thousands of DRAM columns at once. With 16 DRAM banks, it provides 88× the throughput of a CPU and
+              5.8× that of a high-end GPU, on average across 16 operations.</p>
+          </div>
+          <p class="entry-links"><a href="https://arxiv.org/abs/2105.12839">Paper</a><a href="https://www.youtube.com/watch?v=pmZoAAhvkRQ">Lecture</a></p>
+        </li>
+        <li class="entry">
+          <p class="entry-key"><span class="pname">MIMDRAM</span><span class="venue">HPCA 2024</span></p>
+          <div class="entry-main">
+            <p class="entry-desc">Lets different segments of a DRAM row run different operations at the same time, using
+              fine-grained DRAM access: a multiple-instruction multiple-data model inside each subarray. Compiler passes map
+              ordinary loops onto it. It provides 34× the performance and 14.3× the energy efficiency of SIMDRAM, on
+              average.</p>
+          </div>
+          <p class="entry-links"><a href="https://arxiv.org/abs/2402.19080">Paper</a><a href="https://github.com/CMU-SAFARI/MIMDRAM">Code</a></p>
+        </li>
+        <li class="entry">
+          <p class="entry-key"><span class="pname">Proteus</span><span class="venue">ICS 2025</span></p>
+          <div class="entry-main">
+            <p class="entry-desc">Lowers the bit precision of each operation at run time to what its values need. It also runs
+              independent steps across several DRAM arrays at once, and picks the data representation and arithmetic
+              algorithm for each instruction. With a single DRAM bank, it provides 10.2× the performance per area of
+              SIMDRAM and 8.1× lower energy, on average.</p>
+          </div>
+          <p class="entry-links"><a href="https://arxiv.org/abs/2501.17466">Paper</a><a href="https://github.com/CMU-SAFARI/Proteus">Code</a><a href="https://youtu.be/GFJAWzUw6s4">Talk</a></p>
+        </li>
+        <li class="entry">
+          <p class="entry-key"><span class="pname">PipeDRAM</span><span class="venue">MICRO 2026</span></p>
+          <div class="entry-main">
+            <p class="entry-desc">Computes directly on data in the horizontal layout that CPUs use, so data is never
+              transposed. The memory controller reorganizes the bits inside each memory request, and a pipelined execution
+              model overlaps bit-dependent and bit-independent operations across the DRAM array. It provides 11.8× the
+              performance of both SIMDRAM and MIMDRAM, and 80.4× that of Proteus, on average.</p>
+          </div>
+          <p class="entry-links"><a href="https://arxiv.org/abs/2609.30998">Paper</a><a href="https://github.com/CMU-SAFARI/PipeDRAM">Code</a></p>
+        </li>
+      </ol>
+      <ol class="rows after">
+        <li class="entry" id="p-dappa">
+          <p class="entry-key"><span class="pname">DaPPA</span><span class="venue">ICCD 2026</span></p>
+          <div class="entry-main">
+            <p class="entry-desc">A programming framework for these systems. Programmers express a computation once, with
+              data-parallel patterns and a dataflow interface, and DaPPA’s back-ends generate the data orchestration for a
+              real near-memory system (UPMEM) and the multi-level tiling for processing-using-DRAM. On UPMEM, it is 1.6×
+              faster than hand-tuned code, with 95% fewer lines of code, on average.</p>
+          </div>
+          <p class="entry-links"><a href="https://arxiv.org/abs/2310.10168">Paper</a><a href="https://github.com/CMU-SAFARI/DaPPA">Code</a></p>
+        </li>
+      </ol>
+      <p class="related"><span class="related-head">Related</span> Boolean logic
+        (<a href="https://arxiv.org/abs/2402.18736">HPCA 2024</a>) and true random numbers
+        (<a href="https://arxiv.org/abs/2510.20269">ICCD 2025</a>) in real DRAM chips, lookup-table computing in DRAM
+        (<a href="https://arxiv.org/abs/2104.07699">pLUTo, MICRO 2022</a>), and an overview of recent advances in
+        processing-in-DRAM (<a href="https://arxiv.org/abs/2412.19275">IEDM 2024</a>).</p>
+    </article>
+
+    <div class="colleagues">
+      <h3>With colleagues</h3>
+      <ol class="rows">
+        <li class="entry" id="t-rel">
+          <p class="entry-key"><span class="pname">DRAM reliability and security</span></p>
+          <div class="entry-main">
+            <p class="entry-desc">Read disturbance (RowHammer) in real DRAM chips and defenses against it:
+              <a href="https://arxiv.org/abs/2502.12650">Chronus</a>,
+              <a href="https://arxiv.org/abs/2502.13075">Variable Read Disturbance</a>,
+              <a href="https://arxiv.org/abs/2402.18652">Svärd</a>,
+              <a href="https://arxiv.org/abs/2310.09977">ABACuS</a>, and
+              <a href="https://arxiv.org/abs/2206.09999">RowHammer under reduced wordline voltage</a>; and error profiling for
+              on-die ECC with <a href="https://arxiv.org/abs/2109.12697">HARP</a>. Chronus (HPCA 2025) received the 2026
+              Intel Hardware Security Academic Award.</p>
+          </div>
+        </li>
+        <li class="entry" id="t-ndp">
+          <p class="entry-key"><span class="pname">Near-data processing for applications</span></p>
+          <div class="entry-main">
+            <p class="entry-desc">Hybrid transactional and analytical databases
+              (<a href="https://people.inf.ethz.ch/omutlu/pub/Polynesia_icde22.pdf">Polynesia</a>), raw-signal genome
+              analysis inside storage (<a href="https://arxiv.org/abs/2506.10931">MARS</a>), stencil computations near the
+              cache (<a href="https://arxiv.org/abs/2112.14216">Casper</a>), and an overview of the field,
+              <a href="https://arxiv.org/abs/2012.03112">A Modern Primer on Processing in Memory</a>.</p>
+          </div>
+        </li>
+        <li class="entry" id="t-prog">
+          <p class="entry-key"><span class="pname">Programming and system support</span></p>
+          <div class="entry-main">
+            <p class="entry-desc">Besides <a href="#p-dappa">DaPPA</a>: transcendental functions for PIM
+              (<a href="https://arxiv.org/abs/2304.01951">TransPimLib</a>), machine learning workloads on a real PIM system
+              (<a href="https://people.inf.ethz.ch/omutlu/pub/MLonUPMEM-PIM_ispass23.pdf">ISPASS 2023</a>), CPU-memory data
+              movement in memory-centric systems (<a href="https://arxiv.org/abs/2212.06292">ALP</a>), and performance
+              prediction for near-memory computing
+              (<a href="https://people.inf.ethz.ch/omutlu/pub/NAPEL-near-memory-computing-performance-prediction-via-ML_dac19.pdf">NAPEL</a>).</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="software">
+      <h3>Open-source software</h3>
+      <p class="thread-intro">I release the code and simulators behind my main systems.</p>
+      <dl class="rows repos">
+        <div class="entry"><dt class="entry-key"><a class="pname" href="https://github.com/CMU-SAFARI/DAMOV">DAMOV</a></dt><dd class="entry-main">Benchmark suite and methodology for data movement bottlenecks</dd></div>
+        <div class="entry"><dt class="entry-key"><a class="pname" href="https://github.com/CMU-SAFARI/ramulator-pim">Ramulator-PIM</a></dt><dd class="entry-main">Simulator for processing-in-memory</dd></div>
+        <div class="entry"><dt class="entry-key"><a class="pname" href="https://github.com/CMU-SAFARI/MIMDRAM">MIMDRAM</a></dt><dd class="entry-main">gem5 model and LLVM compiler passes</dd></div>
+        <div class="entry"><dt class="entry-key"><a class="pname" href="https://github.com/CMU-SAFARI/Proteus">Proteus</a></dt><dd class="entry-main">Code for dynamic-precision arithmetic in DRAM</dd></div>
+        <div class="entry"><dt class="entry-key"><a class="pname" href="https://github.com/CMU-SAFARI/DaPPA">DaPPA</a></dt><dd class="entry-main">The programming framework, with its UPMEM and processing-using-DRAM back-ends</dd></div>
+        <div class="entry"><dt class="entry-key"><a class="pname" href="https://github.com/CMU-SAFARI/PipeDRAM">PipeDRAM</a></dt><dd class="entry-main">Code for transposition-free processing-using-DRAM</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===================================================================== publications -->
+  <section class="wrap block" id="publications" aria-labelledby="pubs-title">
+    <div class="opener">
+      <h2 id="pubs-title">Publications</h2>
+      <p class="opener-aside" id="pub-count" aria-live="polite"></p>
+    </div>
+    <div class="pub-controls">
+      <div class="topic-filter" role="group" aria-label="Filter by topic" id="topic-filter"></div>
+      <label class="check">
+        <input type="checkbox" id="first-only">
+        <span class="check-box" aria-hidden="true"></span>
+        First-author papers only
+      </label>
+    </div>
+    <div id="pub-list" class="pub-list">
+      <noscript><p>The publication list needs JavaScript. The full list is also on
+        <a href="https://dblp.org/pid/197/9584.html">DBLP</a>.</p></noscript>
+    </div>
+    <p class="footnote">* Co-first authors.</p>
+  </section>
+
+  <!-- ===================================================================== talks -->
+  <section class="wrap block" id="talks" aria-labelledby="talks-title">
+    <div class="opener">
+      <h2 id="talks-title">Talks and tutorials</h2>
+    </div>
+
+    <ul class="videos" aria-label="Recorded talks">
+      <li><a class="video" href="https://www.youtube.com/watch?v=GFJAWzUw6s4" data-video="GFJAWzUw6s4">
+        <span class="video-frame"><img src="https://i.ytimg.com/vi/GFJAWzUw6s4/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+        <span class="video-title">Proteus: dynamic-precision arithmetic in DRAM</span><span class="video-where">ICS 2025, Salt Lake City</span></a></li>
+      <li><a class="video" href="https://www.youtube.com/watch?v=PE9ozh9NhFc" data-video="PE9ozh9NhFc">
+        <span class="video-frame"><img src="https://i.ytimg.com/vi/PE9ozh9NhFc/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+        <span class="video-title">SimplePIM and DaPPA</span><span class="video-where">ABUMPIMP 2024, Madrid</span></a></li>
+      <li><a class="video" href="https://www.youtube.com/watch?v=9t1FJQ6nNw4" data-video="9t1FJQ6nNw4">
+        <span class="video-frame"><img src="https://i.ytimg.com/vi/9t1FJQ6nNw4/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+        <span class="video-title">pLUTo: lookup-table computing in DRAM</span><span class="video-where">SRC TECHCON, Austin</span></a></li>
+      <li><a class="video" href="https://www.youtube.com/watch?v=qeukNs5XI3g" data-video="qeukNs5XI3g">
+        <span class="video-frame"><img src="https://i.ytimg.com/vi/qeukNs5XI3g/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+        <span class="video-title">Data-centric architectures for machine learning and databases</span><span class="video-where">ISVLSI 2022, Nicosia</span></a></li>
+      <li><a class="video" href="https://www.youtube.com/watch?v=3IHmaDjtWcE" data-video="3IHmaDjtWcE">
+        <span class="video-frame"><img src="https://i.ytimg.com/vi/3IHmaDjtWcE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+        <span class="video-title">Polynesia: hybrid transactional and analytical databases</span><span class="video-where">ICDE 2022, virtual</span></a></li>
+      <li><a class="video" href="https://www.youtube.com/watch?v=pmZoAAhvkRQ" data-video="pmZoAAhvkRQ">
+        <span class="video-frame"><img src="https://i.ytimg.com/vi/pmZoAAhvkRQ/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+        <span class="video-title">SIMDRAM: arbitrary operations in DRAM</span><span class="video-where">Processing-in-Memory course 2022, ETH Zürich</span></a></li>
+    </ul>
+
+    <div class="talk-group">
+      <h3>Memory-Centric Computing Systems tutorials</h3>
+      <p class="thread-intro">Co-organizer, with Onur Mutlu and the SAFARI Research Group.</p>
+      <ol class="rows">
+        <li class="entry"><p class="entry-key"><a class="pname" href="https://events.safari.ethz.ch/isca25-MCCSys/">ISCA 2025</a></p><p class="entry-main">Tokyo, 21 June 2025</p></li>
+        <li class="entry"><p class="entry-key"><a class="pname" href="https://events.safari.ethz.ch/ics25-MCCSys/">ICS 2025</a></p><p class="entry-main">Salt Lake City, 8 June 2025</p></li>
+        <li class="entry"><p class="entry-key"><a class="pname" href="https://events.safari.ethz.ch/asplos25-MCCSys/">ASPLOS 2025</a></p><p class="entry-main">Rotterdam, 30 March 2025</p></li>
+        <li class="entry"><p class="entry-key"><a class="pname" href="https://events.safari.ethz.ch/ppopp25-memorycentric-tutorial/">PPoPP, HPCA, and CGO 2025</a></p><p class="entry-main">Las Vegas, 1 March 2025</p></li>
+        <li class="entry"><p class="entry-key"><a class="pname" href="https://events.safari.ethz.ch/micro24-memorycentric-tutorial/">MICRO 2024</a></p><p class="entry-main">Austin, 2 November 2024</p></li>
+        <li class="entry"><p class="entry-key"><a class="pname" href="https://events.safari.ethz.ch/isca24-memorycentric-tutorial/">ISCA 2024</a></p><p class="entry-main">Buenos Aires, 29 June 2024</p></li>
+        <li class="entry"><p class="entry-key"><a class="pname" href="https://events.safari.ethz.ch/heart24-memorycentric-tutorial/">HEART 2024</a></p><p class="entry-main">Porto, 21 June 2024</p></li>
+      </ol>
+    </div>
+
+    <div class="talk-group">
+      <h3>Invited talks</h3>
+      <dl class="rows">
+        <div class="entry"><dt class="entry-key"><span class="pname">2025</span></dt><dd class="entry-main">IBM Research Zurich</dd></div>
+        <div class="entry"><dt class="entry-key"><span class="pname">2024</span></dt><dd class="entry-main">Apple, AMD, Arm (Austin and Cambridge), SK hynix, Rambus,
+          Stanford University, UT Austin, Texas State University, ACCESS Seminar, EFCL Summer School, DOT-PIM Workshop at
+          ESWEEK, ABUMPIMP Minisymposium in Madrid (<a href="https://youtu.be/PE9ozh9NhFc">video</a>), and Memory &amp;
+          Storage Summit in Bengaluru (<a href="talks/geraldo_casif_20241207_PUM.pdf">slides</a>)</dd></div>
+        <div class="entry"><dt class="entry-key"><span class="pname">2023</span></dt><dd class="entry-main">University of Toronto, Huawei Toronto</dd></div>
+      </dl>
+    </div>
+
+    <div class="talk-group">
+      <h3>Conference talks</h3>
+      <ol class="rows talk-list">
+        <li class="entry"><p class="entry-key"><span class="venue">ICS 2025</span></p><div class="entry-main"><p class="entry-title">Proteus: Achieving High-Performance Processing-Using-DRAM via Dynamic Precision Bit-Serial Arithmetic</p><p class="entry-where">Salt Lake City</p></div><p class="entry-links"><a href="https://youtu.be/GFJAWzUw6s4">Video</a></p></li>
+        <li class="entry"><p class="entry-key"><span class="venue">HPCA 2024</span></p><div class="entry-main"><p class="entry-title">MIMDRAM: An End-to-End Processing-Using-DRAM System for High-Throughput, Energy-Efficient and Programmer-Transparent Multiple-Instruction Multiple-Data Processing</p><p class="entry-where">Edinburgh; also at SRC TECHCON 2024, Austin</p></div></li>
+        <li class="entry"><p class="entry-key"><span class="venue">FMS 2024</span></p><div class="entry-main"><p class="entry-title">Software Frameworks for Productive and Effective Processing-in-Memory Architectures</p><p class="entry-where">Santa Clara</p></div></li>
+        <li class="entry"><p class="entry-key"><span class="venue">FMS 2024</span></p><div class="entry-main"><p class="entry-title">Methodologies, Workloads, and Tools for Processing-in-Memory: Enabling the Adoption of Data-Centric Architectures</p><p class="entry-where">Santa Clara; also at ISVLSI 2022, Nicosia</p></div></li>
+        <li class="entry"><p class="entry-key"><span class="venue">SRC TECHCON</span></p><div class="entry-main"><p class="entry-title">pLUTo: Enabling Massively Parallel Computation in DRAM via Lookup Tables</p><p class="entry-where">Austin</p></div><p class="entry-links"><a href="https://www.youtube.com/watch?v=9t1FJQ6nNw4">Video</a></p></li>
+        <li class="entry"><p class="entry-key"><span class="venue">MICRO 2023</span></p><div class="entry-main"><p class="entry-title">PUMA: Efficient and Low-Cost Memory Allocation and Alignment Support for Processing-Using-Memory Architecture</p><p class="entry-where">Student Research Competition, Toronto</p></div></li>
+        <li class="entry"><p class="entry-key"><span class="venue">ISVLSI 2022</span></p><div class="entry-main"><p class="entry-title">Heterogeneous Data-Centric Architectures for Modern Data-Intensive Applications: Case Studies in Machine Learning and Databases</p><p class="entry-where">Nicosia</p></div><p class="entry-links"><a href="https://www.youtube.com/watch?v=qeukNs5XI3g">Video</a></p></li>
+        <li class="entry"><p class="entry-key"><span class="venue">ICDE 2022</span></p><div class="entry-main"><p class="entry-title">Polynesia: Enabling High-Performance and Energy-Efficient Hybrid Transactional/Analytical Databases with Hardware/Software Co-Design</p><p class="entry-where">Virtual</p></div><p class="entry-links"><a href="https://www.youtube.com/watch?v=3IHmaDjtWcE">Video</a></p></li>
+        <li class="entry"><p class="entry-key"><span class="venue">PACT 2021</span></p><div class="entry-main"><p class="entry-title">Google Neural Network Models for Edge Devices: Analyzing and Mitigating Machine Learning Inference Bottlenecks</p><p class="entry-where">Virtual</p></div></li>
+        <li class="entry"><p class="entry-key"><span class="venue">SRC TECHCON 2019</span></p><div class="entry-main"><p class="entry-title">Understanding Data Movement Bottlenecks in Modern Data-Intensive Workloads</p><p class="entry-where">Austin</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================================================================== experience -->
+  <section class="wrap block" id="experience" aria-labelledby="exp-title">
+    <div class="opener">
+      <h2 id="exp-title">Experience and education</h2>
+    </div>
+    <ol class="rows timeline">
+      <li class="entry"><p class="entry-key"><span class="when">2026 to now</span></p>
+        <div class="entry-main"><h3 class="entry-name">Senior Researcher</h3><p>Huawei Zurich Research Center</p></div></li>
+      <li class="entry"><p class="entry-key"><span class="when">2025 to 2026</span></p>
+        <div class="entry-main"><h3 class="entry-name">Postdoctoral Researcher</h3><p>SAFARI Research Group, ETH Zürich, with Onur Mutlu</p></div></li>
+      <li class="entry"><p class="entry-key"><span class="when">2018 to 2025</span></p>
+        <div class="entry-main"><h3 class="entry-name">Ph.D. in Computer Science</h3><p>ETH Zürich, advised by Onur Mutlu. Thesis: New Tools, Programming
+          Models, and System Support for Processing-in-Memory Architectures.</p></div></li>
+      <li class="entry"><p class="entry-key"><span class="when">2019</span></p>
+        <div class="entry-main"><h3 class="entry-name">Hardware Engineering Intern</h3><p>Google, San Francisco Bay Area</p></div></li>
+      <li class="entry"><p class="entry-key"><span class="when">2017 to 2018</span></p>
+        <div class="entry-main"><h3 class="entry-name">Research Assistant</h3><p>SAFARI Research Group, ETH Zürich</p></div></li>
+      <li class="entry"><p class="entry-key"><span class="when">2016 to 2017</span></p>
+        <div class="entry-main"><h3 class="entry-name">M.S. in Computer Science</h3><p>Federal University of Rio Grande do Sul, Brazil, advised by Luigi
+          Carro. Thesis: A Generic Processing in Memory Cycle Accurate Simulator under Hybrid Memory Cube
+          Architecture.</p></div></li>
+      <li class="entry"><p class="entry-key"><span class="when">2014 to 2015</span></p>
+        <div class="entry-main"><h3 class="entry-name">Exchange student in Computer Engineering</h3><p>Portland State University, USA, with a Brazil
+          Scientific Mobility Program scholarship</p></div></li>
+      <li class="entry"><p class="entry-key"><span class="when">2012 to 2015</span></p>
+        <div class="entry-main"><h3 class="entry-name">B.S. in Computer Science</h3><p>Federal University of Viçosa, Brazil</p></div></li>
+    </ol>
+
+    <dl class="rows facts">
+      <div class="entry"><dt class="entry-key"><span class="pname">Awards</span></dt>
+        <dd class="entry-main">2026 Intel Hardware Security Academic Award (Recent Publication Award), for Chronus, HPCA 2025.</dd></div>
+      <div class="entry"><dt class="entry-key"><span class="pname">Service</span></dt>
+        <dd class="entry-main">Reviewer for IEEE Transactions on Computers. Subreviewer for ISCA, MICRO, ASPLOS, HPCA, PACT, DSN,
+          EuroSys, USENIX ATC, CCS, PLDI, ISPASS, ISCAS, MSST, NVMW, IEEE CAL, TCAD, TVLSI, TCSI, TED, and Nature
+          Electronics.</dd></div>
+      <div class="entry"><dt class="entry-key"><span class="pname">Tools</span></dt>
+        <dd class="entry-main">Languages: C/C++, Python, Verilog, and SystemC. Simulators: gem5, ZSim, and Ramulator. Compilers
+          and profilers: LLVM, perf, and VTune.</dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="footer-row">
+    <p>Geraldo F. Oliveira, Zürich</p>
+    <p>Updated November 2026</p>
+  </div></div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/fluid.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/motion.js"></script>
+</body>
+</html>

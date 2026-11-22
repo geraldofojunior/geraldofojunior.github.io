@@ -3,20 +3,26 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
-  build:
-    runs-on: macos-latest
+  deploy:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '18.x'
-    - run: npm install
-    - run: npm run build
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: dist
+      - uses: actions/checkout@v4
+
+      # The site is static: site/ is published as is, with the talk slides next to it.
+      - name: Assemble the site
+        run: |
+          mkdir -p public
+          cp -R site/. public/
+          cp -R talks public/talks
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: public
