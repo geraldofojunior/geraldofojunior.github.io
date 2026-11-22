@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Geraldo F. Oliveira | Memory systems for AI</title>
+  <!-- design option C, v2: B's layout with A's publications; light only; the white-background portrait -->
+  <meta name="color-scheme" content="light">
   <meta name="description" content="Geraldo F. Oliveira, Senior Researcher at Huawei Zurich Research Center. I build memory systems for AI, with high bandwidth flash for LLM inference. Before that, I worked on processing-in-memory at ETH Zürich.">
-  <meta name="color-scheme" content="light dark">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Geraldo F. Oliveira">
   <meta property="og:description" content="Senior Researcher at Huawei Zurich Research Center. I build memory systems for AI.">
@@ -14,8 +15,16 @@
   <link rel="canonical" href="https://geraldofojunior.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap">
   <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="css/b.css">
+  <link rel="stylesheet" href="css/c.css">
+  <link rel="stylesheet" href="css/c2.css">
+  <link rel="stylesheet" href="css/c3.css">
+  <link rel="stylesheet" href="css/c4.css">
+  <link rel="stylesheet" href="css/c5.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,12 +49,19 @@
   }
   </script>
 </head>
-<body>
+<body class="v-b v-c v-c2 v-c3 v-c4 v-c5">
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="wrap header-row">
-    <a class="wordmark" href="#top">Geraldo F. Oliveira</a>
+<div class="frame">
+<header class="site-header rail">
+  <div class="rail-inner">
+    <picture class="rail-photo">
+      <source type="image/webp" srcset="img/portrait-480.webp 480w, img/portrait-720.webp 720w" sizes="208px">
+      <img src="img/portrait-480.jpg" srcset="img/portrait-480.jpg 480w, img/portrait-720.jpg 720w" sizes="208px"
+           width="480" height="640" alt="Portrait of Geraldo F. Oliveira">
+    </picture>
+    <h1 id="name">Geraldo F. Oliveira</h1>
+    <p class="role">Senior Researcher at Huawei Zurich Research Center</p>
     <nav aria-label="Sections">
       <ul>
         <li><a href="#research">Research</a></li>
@@ -55,162 +71,34 @@
       </ul>
       <span class="nav-marker" aria-hidden="true"></span>
     </nav>
-  </div>
-</header>
-
-<main id="main">
-
-  <!-- ===================================================================== masthead -->
-  <section class="wrap masthead" id="top" aria-labelledby="name">
-    <div class="mast-text">
-      <h1 id="name">Geraldo F. Oliveira</h1>
-      <p class="role">Senior Researcher at Huawei Zurich Research Center</p>
-      <p class="lede">I build memory systems for AI. My current work is on high bandwidth flash (HBF), an emerging
-        3D-stacked NAND flash memory that puts terabytes of capacity next to the accelerator. With HBF, a single
-        accelerator or a small node can serve larger language models.</p>
-      <p class="previously">Before Huawei, I did my Ph.D. and a postdoc in Onur Mutlu’s
-        <a href="https://safari.ethz.ch">SAFARI Research Group</a> at ETH Zürich. I worked on processing-in-memory
-        (PIM) across the stack, from computing inside DRAM chips to the programming models and compilers that make it
-        usable.</p>
-      <p class="profiles">
+    <p class="profiles rail-links">
         <a href="https://github.com/geraldofojunior">GitHub</a>
         <a href="https://dblp.org/pid/197/9584.html">DBLP</a>
         <a href="https://www.linkedin.com/in/geraldo-francisco-de-oliveira-junior-966b48113/">LinkedIn</a>
         <a href="https://twitter.com/geraldofojunior">X</a>
       </p>
-    </div>
-    <picture class="portrait">
-      <source type="image/webp" srcset="assets/photo-480.webp 480w, assets/photo-720.webp 720w" sizes="(min-width: 860px) 224px, 144px">
-      <img src="assets/photo-480.jpg" srcset="assets/photo-480.jpg 480w, assets/photo-720.jpg 720w"
-           sizes="(min-width: 860px) 224px, 144px" width="480" height="640" alt="Portrait of Geraldo F. Oliveira">
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top" aria-label="About">
+    <picture class="hero-photo">
+      <source type="image/webp" srcset="img/portrait-480.webp 480w, img/portrait-720.webp 720w" sizes="180px">
+      <img src="img/portrait-480.jpg" srcset="img/portrait-480.jpg 480w, img/portrait-720.jpg 720w" sizes="180px"
+           width="480" height="640" alt="">
     </picture>
+    <p class="statement">I build memory systems for AI.</p>
+    <p class="lede">My current work is on high bandwidth flash (HBF), an emerging
+        3D-stacked NAND flash memory that puts terabytes of capacity next to the accelerator. With HBF, a single
+        accelerator or a small node can serve larger language models.</p>
+    <p class="previously">Before Huawei, I did my Ph.D. and a postdoc in Onur Mutlu’s
+        <a href="https://safari.ethz.ch">SAFARI Research Group</a> at ETH Zürich. I worked on processing-in-memory
+        (PIM) across the stack, from computing inside DRAM chips to the programming models and compilers that make it
+        usable.</p>
   </section>
 
-  <!-- ===================================================================== where the work acts -->
-  <!-- One drawing of the hardware, from an AI accelerator package down to the rows of a DRAM subarray. Each research
-       topic is placed on the part it changes; pointing at a topic (or focusing its link) marks that part. -->
-  <figure class="wrap system" id="system" data-active="mem" aria-labelledby="system-cap">
-    <div class="panels">
-
-      <div class="panel" style="--w:260">
-        <p class="panel-title">AI accelerator package</p>
-        <svg class="panel-svg" viewBox="0 0 260 200" aria-hidden="true">
-          <rect class="board" x="0" y="18" width="260" height="164"/>
-          <g class="stack"><rect x="20" y="36" width="56" height="58"/><path d="M20 50.5h56M20 65h56M20 79.5h56"/></g>
-          <g class="stack"><rect x="20" y="106" width="56" height="58"/><path d="M20 120.5h56M20 135h56M20 149.5h56"/></g>
-          <g class="stack hl" data-topic="mem"><rect x="184" y="36" width="56" height="58"/><path d="M184 50.5h56M184 65h56M184 79.5h56"/></g>
-          <g class="stack hl" data-topic="mem"><rect x="184" y="106" width="56" height="58"/><path d="M184 120.5h56M184 135h56M184 149.5h56"/></g>
-          <rect class="die" x="92" y="36" width="76" height="128"/>
-          <text x="48" y="31" class="lbl" text-anchor="middle">HBM</text>
-          <text x="130" y="104.5" class="lbl" text-anchor="middle">Accelerator</text>
-          <text x="212" y="31" class="lbl hl-text" data-topic="mem" text-anchor="middle">HBF</text>
-        </svg>
-        <ul class="panel-topics">
-          <li><a href="#t-mem" data-topic="mem">Memory systems for AI</a><span>FLINT</span></li>
-        </ul>
-      </div>
-
-      <div class="panel-gap" style="--w:36" aria-hidden="true"></div>
-
-      <div class="panel" style="--w:300">
-        <p class="panel-title">Processor and memory</p>
-        <svg class="panel-svg" viewBox="0 0 300 200" aria-hidden="true">
-          <rect class="die" x="8" y="62" width="70" height="76"/>
-          <text x="43" y="104.5" class="lbl" text-anchor="middle">CPU</text>
-          <g class="bus hl" data-topic="dm">
-            <path d="M78 88h76M78 94h76M78 100h76M78 106h76M78 112h76"/>
-            <rect x="154" y="58" width="5" height="84"/>
-            <path d="M159 65h9M159 135h9"/>
-          </g>
-          <text x="116" y="80" class="lbl hl-text" data-topic="dm" text-anchor="middle">Channel</text>
-          <rect class="module" x="168" y="40" width="124" height="50"/>
-          <rect class="chip" x="176" y="50" width="22" height="30"/><rect class="chip" x="204" y="50" width="22" height="30"/><rect class="chip" x="232" y="50" width="22" height="30"/><rect class="chip zoom-src" x="260" y="50" width="22" height="30"/>
-          <path class="zoom-line" d="M282 50H300M282 80H300"/>
-          <g class="hl" data-topic="prog">
-            <rect class="module" x="168" y="110" width="124" height="50"/>
-            <rect class="chip" x="176" y="120" width="22" height="30"/><rect class="core" x="181" y="134" width="12" height="10"/><rect class="chip" x="204" y="120" width="22" height="30"/><rect class="core" x="209" y="134" width="12" height="10"/><rect class="chip" x="232" y="120" width="22" height="30"/><rect class="core" x="237" y="134" width="12" height="10"/><rect class="chip" x="260" y="120" width="22" height="30"/><rect class="core" x="265" y="134" width="12" height="10"/>
-          </g>
-          <text x="230" y="33" class="lbl" text-anchor="middle">DRAM module</text>
-          <text x="230" y="177" class="lbl hl-text" data-topic="prog" text-anchor="middle">PIM module</text>
-        </svg>
-        <ul class="panel-topics">
-          <li><a href="#t-dm" data-topic="dm">Data movement</a><span>DAMOV</span></li>
-          <li><a href="#t-prog" data-topic="prog">Programming support</a><span>DaPPA, TransPimLib</span></li>
-        </ul>
-      </div>
-
-      <svg class="zoom" style="--w:28" viewBox="0 0 28 200" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 50L28 18M0 80L28 182"/>
-      </svg>
-
-      <div class="panel" style="--w:216">
-        <p class="panel-title">DRAM bank</p>
-        <svg class="panel-svg" viewBox="0 0 216 200" aria-hidden="true">
-          <rect class="board" x="0" y="18" width="216" height="164"/>
-          <rect class="decoder" x="8" y="28" width="15" height="118"/>
-          <rect class="array" x="28" y="30" width="116" height="26"/>
-          <path class="wl" d="M28 36.5h116"/>
-          <path class="wl" d="M28 43.0h116"/>
-          <path class="wl" d="M28 49.5h116"/>
-          <rect class="sa" x="28" y="56" width="116" height="6"/>
-          <rect class="array" x="28" y="68" width="116" height="26"/>
-          <path class="wl" d="M28 74.5h116"/>
-          <g class="row hl" data-topic="rel"><path class="wl" d="M28 81.0h116"/></g>
-          <path class="wl" d="M28 87.5h116"/>
-          <rect class="sa" x="28" y="94" width="116" height="6"/>
-          <rect class="array" x="28" y="106" width="116" height="26"/>
-          <path class="wl" d="M28 112.5h116"/>
-          <path class="wl" d="M28 119.0h116"/>
-          <path class="wl" d="M28 125.5h116"/>
-          <rect class="sa" x="28" y="132" width="116" height="6"/>
-          <rect class="zoom-src" x="26" y="104" width="120" height="36"/>
-          <path class="zoom-line" d="M146 104H216M146 140H216"/>
-          <rect class="decoder" x="28" y="148" width="116" height="16"/>
-          <text x="86" y="160" class="lbl sm in" text-anchor="middle">Global row buffer</text>
-          <text x="15.5" y="87" class="lbl sm in" text-anchor="middle" transform="rotate(-90 15.5 87)">Row decoder</text>
-          <path class="leader" d="M145 59h4M145 81h4M147 122h4"/>
-          <text x="152" y="56.5" class="lbl sm">Sense</text>
-          <text x="152" y="68.5" class="lbl sm">amplifiers</text>
-          <text x="152" y="85" class="lbl sm hl-text" data-topic="rel">Row</text>
-          <text x="154" y="126" class="lbl sm">Subarray</text>
-        </svg>
-        <ul class="panel-topics">
-          <li><a href="#t-rel" data-topic="rel">Reliability and security</a><span>Chronus, Svärd, ABACuS</span></li>
-        </ul>
-      </div>
-
-      <svg class="zoom" style="--w:28" viewBox="0 0 28 200" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 104L28 18M0 140L28 182"/>
-      </svg>
-
-      <div class="panel" style="--w:260">
-        <p class="panel-title">DRAM subarray</p>
-        <svg class="panel-svg" viewBox="0 0 260 200" aria-hidden="true">
-          <rect class="board" x="0" y="18" width="260" height="164"/>
-          <rect class="decoder" x="10" y="38" width="15" height="104"/>
-          <path class="bl" d="M50 38V143M80 38V143M110 38V143M140 38V143M170 38V143M200 38V143"/>
-          <g class="row"><path class="wl" d="M25 50H208"/><circle class="cell" cx="50" cy="50" r="6"/><circle class="cell" cx="80" cy="50" r="6"/><circle class="cell" cx="110" cy="50" r="6"/><circle class="cell" cx="140" cy="50" r="6"/><circle class="cell" cx="170" cy="50" r="6"/><circle class="cell" cx="200" cy="50" r="6"/></g>
-          <g class="row hl" data-topic="pum"><path class="wl" d="M25 70H208"/><circle class="cell" cx="50" cy="70" r="6"/><circle class="cell" cx="80" cy="70" r="6"/><circle class="cell" cx="110" cy="70" r="6"/><circle class="cell" cx="140" cy="70" r="6"/><circle class="cell" cx="170" cy="70" r="6"/><circle class="cell" cx="200" cy="70" r="6"/></g>
-          <g class="row hl" data-topic="pum"><path class="wl" d="M25 90H208"/><circle class="cell" cx="50" cy="90" r="6"/><circle class="cell" cx="80" cy="90" r="6"/><circle class="cell" cx="110" cy="90" r="6"/><circle class="cell" cx="140" cy="90" r="6"/><circle class="cell" cx="170" cy="90" r="6"/><circle class="cell" cx="200" cy="90" r="6"/></g>
-          <g class="row hl" data-topic="pum"><path class="wl" d="M25 110H208"/><circle class="cell" cx="50" cy="110" r="6"/><circle class="cell" cx="80" cy="110" r="6"/><circle class="cell" cx="110" cy="110" r="6"/><circle class="cell" cx="140" cy="110" r="6"/><circle class="cell" cx="170" cy="110" r="6"/><circle class="cell" cx="200" cy="110" r="6"/></g>
-          <g class="row"><path class="wl" d="M25 130H208"/><circle class="cell" cx="50" cy="130" r="6"/><circle class="cell" cx="80" cy="130" r="6"/><circle class="cell" cx="110" cy="130" r="6"/><circle class="cell" cx="140" cy="130" r="6"/><circle class="cell" cx="170" cy="130" r="6"/><circle class="cell" cx="200" cy="130" r="6"/></g>
-          <g class="hl" data-topic="pum"><rect class="sa" x="43" y="143" width="14" height="11"/><rect class="sa" x="73" y="143" width="14" height="11"/><rect class="sa" x="103" y="143" width="14" height="11"/><rect class="sa" x="133" y="143" width="14" height="11"/><rect class="sa" x="163" y="143" width="14" height="11"/><rect class="sa" x="193" y="143" width="14" height="11"/></g>
-          <text x="17.5" y="90" class="lbl sm in" text-anchor="middle" transform="rotate(-90 17.5 90)">Row decoder</text>
-          <text x="200" y="33" class="lbl sm" text-anchor="middle">Bitline</text>
-          <text x="211" y="54" class="lbl sm">Wordline</text>
-          <text x="125" y="172" class="lbl sm hl-text" data-topic="pum" text-anchor="middle">Sense amplifiers</text>
-        </svg>
-        <ul class="panel-topics">
-          <li><a href="#t-pum" data-topic="pum">Computing inside memory</a><span>SIMDRAM, MIMDRAM, Proteus, PipeDRAM</span></li>
-        </ul>
-      </div>
-    </div>
-    <figcaption id="system-cap">Where my research acts: in the memory next to an AI accelerator, on the channel between
-      processor and memory, and inside the DRAM chip.</figcaption>
-  </figure>
-
-  <!-- ===================================================================== recent papers -->
-  <section class="wrap block" id="recent" aria-labelledby="recent-title">
+  <section class="block" id="recent" aria-labelledby="recent-title">
     <div class="opener">
       <h2 id="recent-title">Recent papers</h2>
       <a class="opener-aside" href="#publications">All publications</a>
@@ -254,8 +142,7 @@
     </ol>
   </section>
 
-  <!-- ===================================================================== research -->
-  <section class="wrap block" id="research" aria-labelledby="research-title">
+  <section class="block" id="research" aria-labelledby="research-title">
     <div class="opener">
       <h2 id="research-title">Research</h2>
     </div>
@@ -452,8 +339,7 @@
     </div>
   </section>
 
-  <!-- ===================================================================== publications -->
-  <section class="wrap block" id="publications" aria-labelledby="pubs-title">
+  <section class="block tray" id="publications" aria-labelledby="pubs-title">
     <div class="opener">
       <h2 id="pubs-title">Publications</h2>
       <p class="opener-aside" id="pub-count" aria-live="polite"></p>
@@ -473,12 +359,10 @@
     <p class="footnote">* Co-first authors.</p>
   </section>
 
-  <!-- ===================================================================== talks -->
-  <section class="wrap block" id="talks" aria-labelledby="talks-title">
+  <section class="block" id="talks" aria-labelledby="talks-title">
     <div class="opener">
       <h2 id="talks-title">Talks and tutorials</h2>
     </div>
-
     <ul class="videos" aria-label="Recorded talks">
       <li><a class="video" href="https://www.youtube.com/watch?v=GFJAWzUw6s4" data-video="GFJAWzUw6s4">
         <span class="video-frame"><img src="https://i.ytimg.com/vi/GFJAWzUw6s4/hqdefault.jpg" alt="" width="480" height="360" loading="lazy"><span class="play" aria-hidden="true"></span></span>
@@ -500,7 +384,7 @@
         <span class="video-title">SIMDRAM: arbitrary operations in DRAM</span><span class="video-where">Processing-in-Memory course 2022, ETH Zürich</span></a></li>
     </ul>
 
-    <div class="talk-group">
+    <div class="talk-group tutorials">
       <h3>Memory-Centric Computing Systems tutorials</h3>
       <p class="thread-intro">Co-organizer, with Onur Mutlu and the SAFARI Research Group.</p>
       <ol class="rows">
@@ -514,7 +398,7 @@
       </ol>
     </div>
 
-    <div class="talk-group">
+    <div class="talk-group invited">
       <h3>Invited talks</h3>
       <dl class="rows">
         <div class="entry"><dt class="entry-key"><span class="pname">2025</span></dt><dd class="entry-main">IBM Research Zurich</dd></div>
@@ -526,7 +410,7 @@
       </dl>
     </div>
 
-    <div class="talk-group">
+    <div class="talk-group conf">
       <h3>Conference talks</h3>
       <ol class="rows talk-list">
         <li class="entry"><p class="entry-key"><span class="venue">ICS 2025</span></p><div class="entry-main"><p class="entry-title">Proteus: Achieving High-Performance Processing-Using-DRAM via Dynamic Precision Bit-Serial Arithmetic</p><p class="entry-where">Salt Lake City</p></div><p class="entry-links"><a href="https://youtu.be/GFJAWzUw6s4">Video</a></p></li>
@@ -543,8 +427,7 @@
     </div>
   </section>
 
-  <!-- ===================================================================== experience -->
-  <section class="wrap block" id="experience" aria-labelledby="exp-title">
+  <section class="block" id="experience" aria-labelledby="exp-title">
     <div class="opener">
       <h2 id="exp-title">Experience and education</h2>
     </div>
@@ -583,18 +466,19 @@
           and profilers: LLVM, perf, and VTune.</dd></div>
     </dl>
   </section>
-</main>
 
 <footer class="site-footer">
-  <div class="wrap"><div class="footer-row">
+  <div><div class="footer-row">
     <p>Geraldo F. Oliveira, Zürich</p>
     <p>Updated November 2026</p>
   </div></div>
 </footer>
+</main>
+</div>
 
 <script src="assets/data.js"></script>
 <script src="assets/fluid.js"></script>
 <script src="assets/site.js"></script>
-<script src="assets/motion.js"></script>
+<script src="js/motion.js"></script>
 </body>
 </html>

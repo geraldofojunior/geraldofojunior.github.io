@@ -1,0 +1,33 @@
+/* Option C, v5 (2026-11-20): fixes from the Apple-design check. Loads after the stylesheets of C v1 to v4. */
+
+/* 1. The rail fits short laptop screens: the photo shrinks with the window's height (208 px wide from about
+      840 px tall, 120 px at 720 px). Below 700 px the rail scrolls on its own as a last resort. */
+@media (min-width: 68.0625em) {
+  .v-c5 .rail-photo img { width: clamp(112px, calc((100vh - 560px) * 0.75), 208px); }
+  .v-c5 .rail-links { padding-top: 24px; }      /* never closer than this to the menu; the auto margin adds the rest */
+  .v-c5 .rail-inner { height: auto; min-height: 100%; }   /* grows past the window, keeping its bottom padding */
+}
+@media (min-width: 68.0625em) and (max-height: 699px) {
+  .v-c5 .rail { overflow-y: auto; scrollbar-width: none; }
+  .v-c5 .rail::-webkit-scrollbar { display: none; }
+}
+
+/* 2-3. One marker for the current section, riding springs (motion_c5.js): it slides down the rail, or along under
+        the row of links on narrower screens, instead of one mark shrinking while another grows. */
+.v-c5 .site-header nav a::before { display: none; }
+.v-c5 .nav-marker { display: block; }
+@media (min-width: 68.0625em) {
+  .v-c5 .nav-marker { left: -16px; top: 0; bottom: auto; width: 3px; height: 100px; }
+}
+@media (max-width: 68em) {
+  .v-c5 .nav-marker { bottom: 0; }
+  .v-c5 .site-header nav a[aria-current] { font-weight: 500; }    /* colour and marker only: the row never shifts */
+}
+
+/* 4. The video's drag handle only where people drag with a finger; with a mouse the cursor says it */
+.v-c5 .sheet-grabber { display: none; }
+.v-c5 .sheet-panel { padding-top: 20px; }
+@media (pointer: coarse) {
+  .v-c5 .sheet-grabber { display: block; margin: 0 auto 16px; }
+  .v-c5 .sheet-panel { padding-top: 10px; }
+}
